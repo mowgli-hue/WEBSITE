@@ -7,6 +7,7 @@ import { Navbar } from "../components/Navbar";
 import { SiteFooter } from "../components/SiteFooter";
 import { SystemBlueprintIllustration } from "../components/SystemBlueprintIllustration";
 import { services } from "../lib/content";
+import { solutionPages } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -55,6 +56,23 @@ export default function ServicesPage() {
               </article>
             );
           })}
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="section-shell mt-14">
+        <div className="mb-6 max-w-3xl">
+          <p className="section-kicker">SEO Landing Pages</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">Explore targeted solutions by keyword</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {solutionPages.slice(0, 6).map((page) => (
+            <article key={page.slug} className="glass-card p-5">
+              <p className="text-xs uppercase tracking-[0.1em] text-cyan-200/80">{page.keyword}</p>
+              <a href={`/solutions/${page.slug}`} className="mt-2 inline-flex text-lg font-semibold text-white hover:text-cyan-200">
+                {page.title}
+              </a>
+            </article>
+          ))}
         </div>
       </AnimatedSection>
       <SiteFooter />

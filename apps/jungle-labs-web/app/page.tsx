@@ -8,6 +8,7 @@ import { Navbar } from "./components/Navbar";
 import { ProductsSection } from "./components/ProductsSection";
 import { RoadmapSection } from "./components/RoadmapSection";
 import { ServicesSection } from "./components/ServicesSection";
+import { SeoKeywordSection } from "./components/SeoKeywordSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { StorySection } from "./components/StorySection";
 import { SystemsSection } from "./components/SystemsSection";
@@ -53,6 +54,7 @@ export default function HomePage() {
       <StorySection />
       <ProductsSection />
       <ServicesSection />
+      <SeoKeywordSection />
       <EcosystemSection />
       <SystemsSection />
       <RoadmapSection />

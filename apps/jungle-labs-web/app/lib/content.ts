@@ -61,12 +61,12 @@ export const products: Product[] = [
     highlights: ["Adaptive lessons", "Pronunciation feedback", "Gamified progress engine"],
     downloads: [
       {
-        label: "Download on App Store",
-        href: "https://apps.apple.com/us/search?term=franco%20app"
+        label: "Join iOS Waitlist",
+        href: "mailto:admin@junglelabsworld.com?subject=Franco%20iOS%20Waitlist"
       },
       {
-        label: "Get it on Google Play",
-        href: "https://play.google.com/store/search?q=franco%20app&c=apps"
+        label: "Join Android Waitlist",
+        href: "mailto:admin@junglelabsworld.com?subject=Franco%20Android%20Waitlist"
       }
     ]
   },
