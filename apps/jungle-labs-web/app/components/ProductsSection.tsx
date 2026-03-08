@@ -25,8 +25,13 @@ export function ProductsSection() {
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.8, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -6, scale: 1.008 }}
-            className="glass-card group overflow-hidden p-7"
+            className="glass-card group relative overflow-hidden p-7"
           >
+            <div
+              className={`absolute -right-12 -top-14 h-36 w-36 rounded-full blur-3xl ${
+                index % 3 === 0 ? "bg-cyan-300/20" : index % 3 === 1 ? "bg-emerald-300/20" : "bg-amber-300/20"
+              }`}
+            />
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-300 via-cyan-300 to-blue-300 opacity-60" />
             <div className="flex items-center justify-between gap-3">
               <span className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.11em] text-cyan-200">
