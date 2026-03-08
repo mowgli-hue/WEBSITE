@@ -21,6 +21,8 @@ export type Product = {
   status: "In Market" | "Active Build" | "Deployed";
   highlights: string[];
   href?: string;
+  ctaLabel?: string;
+  downloads?: Array<{ label: string; href: string }>;
 };
 
 export type Service = {
@@ -56,17 +58,28 @@ export const products: Product[] = [
       "Reflex-based training, adaptive coaching, and gamified drills that help learners build speaking confidence faster.",
     badge: "Education AI",
     status: "In Market",
-    highlights: ["Adaptive lessons", "Pronunciation feedback", "Gamified progress engine"]
+    highlights: ["Adaptive lessons", "Pronunciation feedback", "Gamified progress engine"],
+    downloads: [
+      {
+        label: "Download on App Store",
+        href: "https://apps.apple.com/us/search?term=franco%20app"
+      },
+      {
+        label: "Get it on Google Play",
+        href: "https://play.google.com/store/search?q=franco%20app&c=apps"
+      }
+    ]
   },
   {
-    name: "Amalytics",
+    name: "Business Budget Intelligence Platform",
     subtitle: "Business Budget + Growth Intelligence",
     description:
       "A live analytics workspace for business budgeting, marketing spend efficiency, and growth forecasting.",
     badge: "Analytics Platform",
     status: "Active Build",
     highlights: ["Budget tracking", "Campaign ROI intelligence", "Cashflow and growth forecasting"],
-    href: "https://www.amalytics.co/"
+    ctaLabel: "Request Early Access",
+    href: "mailto:admin@junglelabsworld.com?subject=Business%20Budget%20Intelligence%20Platform%20Access"
   },
   {
     name: "Jungle Table Ordering OS",
@@ -137,7 +150,7 @@ export const systemsWeBuild: BuildSystem[] = [
 
 export const roadmap = [
   { year: "2025", title: "Franco App", detail: "Launched with AI reflex learning and structured speaking progression." },
-  { year: "2026", title: "Amalytics", detail: "Rolling out business budget intelligence and decision dashboards." },
+  { year: "2026", title: "Budget Intelligence Platform", detail: "Rolling out business budget intelligence and decision dashboards." },
   { year: "2026-2027", title: "Jungle Table Ordering OS", detail: "Deploying tablet-based restaurant ordering and KDS workflows." }
 ];
 

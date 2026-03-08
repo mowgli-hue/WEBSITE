@@ -52,14 +52,29 @@ export function ProductsSection() {
                 </div>
               ))}
             </div>
-            {product.href ? (
+            {product.downloads?.length ? (
+              <div className="mt-6 flex flex-col gap-2">
+                {product.downloads.map((download) => (
+                  <a
+                    key={download.label}
+                    href={download.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-between rounded-xl border border-emerald-300/30 bg-emerald-300/10 px-3 py-2 text-sm font-semibold text-emerald-100 transition hover:border-emerald-300/45 hover:bg-emerald-300/15"
+                  >
+                    {download.label}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            ) : product.href ? (
               <a
                 href={product.href}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
               >
-                Visit Product Site
+                {product.ctaLabel ?? "Visit Product Page"}
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             ) : null}
