@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import { socialLinks } from "../lib/content";
 import { BrandLogo } from "./BrandLogo";
 
@@ -21,6 +22,15 @@ export function SiteFooter() {
             <p className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-cyan-300" /> Surrey, BC, Canada</p>
             <p className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-cyan-300" /> admin@junglelabsworld.com</p>
             <p className="inline-flex items-center gap-2"><Phone className="h-4 w-4 text-cyan-300" /> +1 (604) 902-8699</p>
+            <div className="pt-2 text-xs text-white/65">
+              <Link href="/legal" className="hover:text-cyan-200">Legal</Link>
+              {" · "}
+              <Link href="/privacy-policy" className="hover:text-cyan-200">Privacy</Link>
+              {" · "}
+              <Link href="/terms-of-service" className="hover:text-cyan-200">Terms</Link>
+              {" · "}
+              <Link href="/cookie-policy" className="hover:text-cyan-200">Cookies</Link>
+            </div>
           </div>
           <div className="flex items-start gap-3 md:justify-end">
             <a aria-label="Jungle Labs LinkedIn" href={linkedIn} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 bg-white/5 p-2.5 text-white/80 transition hover:border-cyan-300/45 hover:text-cyan-200"><Linkedin className="h-4 w-4" /></a>
