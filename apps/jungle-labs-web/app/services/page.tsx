@@ -36,6 +36,14 @@ export default function ServicesPage() {
               We architect and build business-critical software from automation engines to analytics platforms. Every
               system is designed for speed, reliability, and measurable ROI.
             </p>
+            <div className="mt-6">
+              <a
+                href="/#contact"
+                className="inline-flex rounded-full bg-gradient-to-r from-emerald-300 to-cyan-300 px-6 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-cyan-200"
+              >
+                Get Your Website Created As You Like
+              </a>
+            </div>
           </div>
           <SystemBlueprintIllustration />
         </div>

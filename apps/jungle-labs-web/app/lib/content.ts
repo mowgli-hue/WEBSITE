@@ -5,6 +5,7 @@ import {
   Compass,
   Database,
   FileCode2,
+  Globe,
   GraduationCap,
   LayoutDashboard,
   Megaphone,
@@ -106,6 +107,13 @@ export const services: Service[] = [
     details:
       "We create CRM systems for sales, intake, and service delivery with role-based views and deep integrations.",
     icon: Database
+  },
+  {
+    title: "Website Design & Development",
+    short: "Get your website created as you like.",
+    details:
+      "We build modern, fast, conversion-focused websites tailored to your brand, offers, and customer journey.",
+    icon: Globe
   },
   {
     title: "Custom Software Development",
