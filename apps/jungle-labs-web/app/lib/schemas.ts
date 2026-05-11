@@ -80,8 +80,57 @@ export const localBusinessSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom CRM Development",                  url: `${BASE_URL}/services` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Analytics & BI Dashboards",               url: `${BASE_URL}/services` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Software Development",             url: `${BASE_URL}/services` } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Franco App",                  url: BASE_URL } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Jungle Table Ordering OS",    url: `${BASE_URL}/jungle-table-ordering` } }
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Franco App",
+          url: BASE_URL,
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "macOS, Windows",
+          description: "AI-powered French language learning platform with reflex training and pronunciation feedback.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", bestRating: "5", ratingCount: "12" }
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Jungle Table Ordering OS",
+          url: `${BASE_URL}/jungle-table-ordering`,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "iOS, Web",
+          description: "Tablet-based ordering and kitchen display system for multi-location restaurants.",
+          offers: { "@type": "Offer", price: "Contact for pricing", priceCurrency: "CAD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", ratingCount: "8" }
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Industry CRM Platform",
+          url: `${BASE_URL}/case-studies`,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description: "Fully automated vertical CRM platform with intake, document handling, and status workflows.",
+          offers: { "@type": "Offer", price: "Contact for pricing", priceCurrency: "CAD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", ratingCount: "6" }
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Tokenization Engine",
+          url: `${BASE_URL}/#blockchain`,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description: "Programmable asset tokenization platform with compliance hooks, custody, and audit reporting.",
+          offers: { "@type": "Offer", price: "Contact for pricing", priceCurrency: "CAD" }
+        }
+      }
     ]
   },
   // AggregateRating built from the testimonials below

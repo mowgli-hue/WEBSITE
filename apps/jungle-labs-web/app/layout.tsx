@@ -6,8 +6,18 @@ import { AnalyticsProvider } from "./components/AnalyticsProvider";
 import { CursorFollower } from "./components/CursorFollower";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space",
+  display: "swap",
+  preload: false
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.junglelabsworld.ca"),
