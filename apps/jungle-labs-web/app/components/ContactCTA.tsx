@@ -59,7 +59,7 @@ export function ContactCTA() {
         transition={{ duration: 0.55 }}
         className="glass-card relative overflow-hidden p-8 md:p-12"
       >
-        <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-cyan-300/20 blur-3xl" />
+        <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="absolute -bottom-20 -left-10 h-52 w-52 rounded-full bg-emerald-300/15 blur-3xl" />
 
         <div className="relative grid gap-10 lg:grid-cols-[1fr_1fr]">
@@ -84,7 +84,7 @@ export function ContactCTA() {
               <a
                 href="tel:+16049028699"
                 onClick={() => trackEvent("schedule_consultation_click", { placement: "contact_cta" })}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:text-cyan-200"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-emerald-300/40 hover:text-emerald-200"
               >
                 <CalendarDays className="h-4 w-4" />
                 Schedule Consultation
@@ -92,8 +92,8 @@ export function ContactCTA() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-5 text-sm text-white/45">
-              <a href="mailto:admin@junglelabsworld.com" className="transition hover:text-cyan-200">admin@junglelabsworld.com</a>
-              <a href="tel:+16049028699" className="transition hover:text-cyan-200">+1 (604) 902-8699</a>
+              <a href="mailto:admin@junglelabsworld.com" className="transition hover:text-emerald-200">admin@junglelabsworld.com</a>
+              <a href="tel:+16049028699" className="transition hover:text-emerald-200">+1 (604) 902-8699</a>
               <span>Surrey, BC, Canada</span>
             </div>
           </div>
@@ -112,21 +112,21 @@ export function ContactCTA() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-cyan-300/50"
+                className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-emerald-300/50"
               />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Work email"
-                className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-cyan-300/50"
+                className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-emerald-300/50"
               />
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Tell us what you're building or need help with..."
                 rows={3}
-                className="resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-cyan-300/50"
+                className="resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-emerald-300/50"
               />
               {status === "error" && (
                 <p className="text-xs text-rose-300">Please fill in all fields and try again.</p>
@@ -134,7 +134,7 @@ export function ContactCTA() {
               <button
                 onClick={handleSubmit}
                 disabled={status === "loading"}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-cyan-300 px-5 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-cyan-200 disabled:opacity-60"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-emerald-300 px-5 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-emerald-200 disabled:opacity-60"
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
                 <SendHorizonal className="h-4 w-4" />

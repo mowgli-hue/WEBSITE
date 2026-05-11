@@ -2,11 +2,13 @@ import { AIDemoSection } from "./components/AIDemoSection";
 import { BlockchainShowcase } from "./components/BlockchainShowcase";
 import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
-import { LeadIntentSection } from "./components/LeadIntentSection";
 import { HeroSection } from "./components/HeroSection";
+import { HowWeWork } from "./components/HowWeWork";
+import { LeadIntentSection } from "./components/LeadIntentSection";
 import { MarqueeBand } from "./components/MarqueeBand";
 import { MotionRibbon } from "./components/MotionRibbon";
 import { Navbar } from "./components/Navbar";
+import { OurTeam } from "./components/OurTeam";
 import { ProductsSection } from "./components/ProductsSection";
 import { RoadmapSection } from "./components/RoadmapSection";
 import { ScrollProgress } from "./components/ScrollProgress";
@@ -17,6 +19,7 @@ import { SocialProofBanner } from "./components/SocialProofBanner";
 import { StorySection } from "./components/StorySection";
 import { SystemsSection } from "./components/SystemsSection";
 import { TechOrbit } from "./components/TechOrbit";
+import { TodaysPlan } from "./components/TodaysPlan";
 import { ChatbotFab } from "./components/ChatbotFab";
 import { LearnFrenchPromoSection } from "./components/LearnFrenchPromoSection";
 
@@ -68,7 +71,7 @@ const orgSchema = {
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <ScrollProgress />
       <Navbar />
@@ -76,16 +79,19 @@ export default function HomePage() {
       <MotionRibbon />
       <SocialProofBanner />
       <MarqueeBand />
+      <HowWeWork />
       <BlockchainShowcase />
       <TechOrbit />
       <LeadIntentSection />
       <StorySection />
       <ProductsSection />
       <ServicesSection />
+      <OurTeam />
       <SeoKeywordSection />
       <EcosystemSection />
       <SystemsSection />
       <RoadmapSection />
+      <TodaysPlan />
       <LearnFrenchPromoSection />
       <AIDemoSection />
       <ContactCTA />

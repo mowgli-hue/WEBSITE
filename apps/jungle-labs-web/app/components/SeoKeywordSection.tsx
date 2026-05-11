@@ -17,7 +17,7 @@ export function SeoKeywordSection() {
       <div className="grid gap-4 md:grid-cols-2">
         {solutionPages.map((page) => (
           <Link key={page.slug} href={`/solutions/${page.slug}`} className="glass-card block p-5 transition hover:-translate-y-1">
-            <p className="text-xs uppercase tracking-[0.1em] text-cyan-200/80">{page.keyword}</p>
+            <p className="text-xs uppercase tracking-[0.1em] text-emerald-200/80">{page.keyword}</p>
             <h3 className="mt-2 text-lg font-semibold text-white">{page.title}</h3>
           </Link>
         ))}

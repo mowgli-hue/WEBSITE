@@ -67,7 +67,7 @@ export function EcosystemSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 + 0.25, duration: 0.45 }}
             >
-              <circle cx={position.x} cy={position.y} r={39} fill="rgba(8, 14, 26, 0.95)" stroke="rgba(56, 189, 248, 0.45)" />
+              <circle cx={position.x} cy={position.y} r={39} fill="rgba(8, 14, 26, 0.95)" stroke="rgba(34, 197, 94, 0.45)" />
               <text x={position.x} y={position.y - 5} textAnchor="middle" fill="#e2e8f0" fontSize="10.5" fontWeight="500">
                 {ecosystemNodes[index].split(" ").slice(0, 2).join(" ")}
               </text>

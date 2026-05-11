@@ -38,7 +38,7 @@ function SpotlightCard({
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(380px circle at ${coords.x}% ${coords.y}%, rgba(56,189,248,0.18), transparent 65%)`
+          background: `radial-gradient(380px circle at ${coords.x}% ${coords.y}%, rgba(34,197,94,0.18), transparent 65%)`
         }}
       />
       <div className="relative">{children}</div>
@@ -61,7 +61,7 @@ export function ServicesSection() {
         </div>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200 transition hover:border-cyan-300/55"
+          className="inline-flex items-center gap-2 rounded-full border border-emerald-300/35 bg-emerald-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200 transition hover:border-emerald-300/55"
         >
           See pricing
           <ArrowUpRight className="h-3.5 w-3.5" />
@@ -114,12 +114,12 @@ export function ServicesSection() {
           const span = idx < 2 ? "md:col-span-3" : "md:col-span-3";
           return (
             <SpotlightCard key={service.title} className={`p-6 ${span}`} index={idx + 1}>
-              <div className="mb-4 inline-flex rounded-xl border border-cyan-300/30 bg-cyan-300/10 p-3 text-cyan-200">
+              <div className="mb-4 inline-flex rounded-xl border border-emerald-300/30 bg-emerald-300/10 p-3 text-emerald-200">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/70">{service.short}</p>
-              <p className="mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-cyan-100/0 transition-all duration-500 group-hover:max-h-48 group-hover:text-cyan-100/80">
+              <p className="mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-emerald-100/0 transition-all duration-500 group-hover:max-h-48 group-hover:text-emerald-100/80">
                 {service.details}
               </p>
             </SpotlightCard>
@@ -132,7 +132,7 @@ export function ServicesSection() {
           return (
             <SpotlightCard key={service.title} className="p-6 md:col-span-6" index={idx + 5}>
               <div className="flex items-start gap-4">
-                <div className="inline-flex rounded-xl border border-violet-300/30 bg-violet-300/10 p-3 text-violet-200">
+                <div className="inline-flex rounded-xl border border-green-300/30 bg-green-300/10 p-3 text-green-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <div className="flex-1">

@@ -43,14 +43,14 @@ export function SiteFooter() {
               AI automation, blockchain platforms, tokenization engines, and custom software for modern businesses building the next generation of digital infrastructure.
             </p>
             <div className="mt-5 space-y-2 text-sm text-white/60">
-              <p className="inline-flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-cyan-300" /> Surrey, BC, Canada</p>
+              <p className="inline-flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-emerald-300" /> Surrey, BC, Canada</p>
               <p className="inline-flex items-center gap-2">
-                <Mail className="h-3.5 w-3.5 text-cyan-300" />
-                <a href="mailto:admin@junglelabsworld.com" className="transition hover:text-cyan-200">admin@junglelabsworld.com</a>
+                <Mail className="h-3.5 w-3.5 text-emerald-300" />
+                <a href="mailto:admin@junglelabsworld.com" className="transition hover:text-emerald-200">admin@junglelabsworld.com</a>
               </p>
               <p className="inline-flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-cyan-300" />
-                <a href="tel:+16049028699" className="transition hover:text-cyan-200">+1 (604) 902-8699</a>
+                <Phone className="h-3.5 w-3.5 text-emerald-300" />
+                <a href="tel:+16049028699" className="transition hover:text-emerald-200">+1 (604) 902-8699</a>
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5">
               {footerProducts.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-cyan-200">
+                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-emerald-200">
                     {item.label}
                   </Link>
                 </li>
@@ -75,7 +75,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5">
               {footerServices.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-cyan-200">
+                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-emerald-200">
                     {item.label}
                   </Link>
                 </li>
@@ -89,7 +89,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5">
               {footerLearn.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-cyan-200">
+                  <Link href={item.href} className="text-sm text-white/65 transition hover:text-emerald-200">
                     {item.label}
                   </Link>
                 </li>
@@ -103,23 +103,23 @@ export function SiteFooter() {
           <p className="text-xs text-white/40">© {new Date().getFullYear()} Jungle Labs. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-4 text-xs text-white/45">
-            <Link href="/privacy-policy" className="transition hover:text-cyan-200">Privacy</Link>
-            <Link href="/terms-of-service" className="transition hover:text-cyan-200">Terms</Link>
-            <Link href="/cookie-policy" className="transition hover:text-cyan-200">Cookies</Link>
-            <Link href="/legal" className="transition hover:text-cyan-200">Legal</Link>
+            <Link href="/privacy-policy" className="transition hover:text-emerald-200">Privacy</Link>
+            <Link href="/terms-of-service" className="transition hover:text-emerald-200">Terms</Link>
+            <Link href="/cookie-policy" className="transition hover:text-emerald-200">Cookies</Link>
+            <Link href="/legal" className="transition hover:text-emerald-200">Legal</Link>
           </div>
 
           <div className="flex items-center gap-2">
             <a aria-label="Jungle Labs LinkedIn" href={linkedIn} target="_blank" rel="noreferrer"
-              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-cyan-300/45 hover:text-cyan-200">
+              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-emerald-300/45 hover:text-emerald-200">
               <Linkedin className="h-3.5 w-3.5" />
             </a>
             <a aria-label="Jungle Labs Instagram" href={instagram} target="_blank" rel="noreferrer"
-              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-cyan-300/45 hover:text-cyan-200">
+              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-emerald-300/45 hover:text-emerald-200">
               <Instagram className="h-3.5 w-3.5" />
             </a>
             <a aria-label="Jungle Labs Facebook" href={facebook} target="_blank" rel="noreferrer"
-              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-cyan-300/45 hover:text-cyan-200">
+              className="rounded-full border border-white/12 bg-white/5 p-2 text-white/70 transition hover:border-emerald-300/45 hover:text-emerald-200">
               <Facebook className="h-3.5 w-3.5" />
             </a>
           </div>

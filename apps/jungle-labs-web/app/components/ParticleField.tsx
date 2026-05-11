@@ -31,7 +31,7 @@ export function ParticleField() {
       {particles.map((particle) => (
         <motion.span
           key={particle.id}
-          className="absolute rounded-full bg-cyan-300/35"
+          className="absolute rounded-full bg-emerald-300/35"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,

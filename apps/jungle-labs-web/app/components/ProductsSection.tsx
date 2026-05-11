@@ -19,12 +19,12 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
     >
       <div
         className={`absolute -right-12 -top-14 h-36 w-36 rounded-full blur-3xl ${
-          index % 3 === 0 ? "bg-cyan-300/20" : index % 3 === 1 ? "bg-emerald-300/20" : "bg-amber-300/20"
+          index % 3 === 0 ? "bg-emerald-300/20" : index % 3 === 1 ? "bg-emerald-300/20" : "bg-lime-300/20"
         }`}
       />
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-300 via-cyan-300 to-blue-300 opacity-60" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-300 via-emerald-300 to-blue-300 opacity-60" />
       <div className="flex items-center justify-between gap-3">
-        <span className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.11em] text-cyan-200">
+        <span className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.11em] text-emerald-200">
           {product.badge}
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.09em] text-white/75">
@@ -37,7 +37,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       <p className="mt-4 leading-relaxed text-white/70">{product.description}</p>
       <div className="mt-5 space-y-2 border-t border-white/10 pt-4">
         {product.highlights.map((highlight) => (
-          <div key={highlight} className="text-sm text-cyan-100/80">
+          <div key={highlight} className="text-sm text-emerald-100/80">
             {`> ${highlight}`}
           </div>
         ))}
@@ -62,7 +62,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
           href={product.href}
           target={product.href.startsWith("http") ? "_blank" : undefined}
           rel={product.href.startsWith("http") ? "noreferrer" : undefined}
-          className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
+          className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-200 transition hover:text-emerald-100"
         >
           {product.ctaLabel ?? "Visit Product Page"}
           <ArrowUpRight className="h-4 w-4" />

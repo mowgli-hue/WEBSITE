@@ -7,15 +7,15 @@ import { AnimatedSection } from "./AnimatedSection";
 
 const stack = [
   { icon: Bot, label: "AI Agents", color: "text-emerald-300", glow: "rgba(52,211,153,0.7)" },
-  { icon: Boxes, label: "Tokenization", color: "text-violet-300", glow: "rgba(167,139,250,0.7)" },
-  { icon: Network, label: "Blockchain", color: "text-cyan-300", glow: "rgba(56,189,248,0.7)" },
-  { icon: Database, label: "Data Pipelines", color: "text-amber-300", glow: "rgba(251,191,36,0.7)" },
+  { icon: Boxes, label: "Tokenization", color: "text-green-300", glow: "rgba(134,239,172,0.7)" },
+  { icon: Network, label: "Blockchain", color: "text-emerald-300", glow: "rgba(34,197,94,0.7)" },
+  { icon: Database, label: "Data Pipelines", color: "text-lime-300", glow: "rgba(163,230,53,0.7)" },
   { icon: Shield, label: "Zero-Trust", color: "text-emerald-300", glow: "rgba(52,211,153,0.7)" },
-  { icon: ChartLine, label: "Analytics", color: "text-cyan-300", glow: "rgba(56,189,248,0.7)" },
-  { icon: Cloud, label: "Cloud Native", color: "text-violet-300", glow: "rgba(167,139,250,0.7)" },
-  { icon: Lock, label: "Cryptography", color: "text-amber-300", glow: "rgba(251,191,36,0.7)" },
+  { icon: ChartLine, label: "Analytics", color: "text-emerald-300", glow: "rgba(34,197,94,0.7)" },
+  { icon: Cloud, label: "Cloud Native", color: "text-green-300", glow: "rgba(134,239,172,0.7)" },
+  { icon: Lock, label: "Cryptography", color: "text-lime-300", glow: "rgba(163,230,53,0.7)" },
   { icon: Globe, label: "Web3", color: "text-emerald-300", glow: "rgba(52,211,153,0.7)" },
-  { icon: Cpu, label: "Edge Compute", color: "text-cyan-300", glow: "rgba(56,189,248,0.7)" }
+  { icon: Cpu, label: "Edge Compute", color: "text-emerald-300", glow: "rgba(34,197,94,0.7)" }
 ];
 
 // inner and outer rings split
@@ -42,13 +42,13 @@ export function TechOrbit() {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" /> Composable architecture
             </li>
             <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" /> Production hardened
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" /> Production hardened
             </li>
             <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-violet-300" /> Chain-agnostic
+              <span className="h-1.5 w-1.5 rounded-full bg-green-300" /> Chain-agnostic
             </li>
             <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-300" /> Built for audit
+              <span className="h-1.5 w-1.5 rounded-full bg-lime-300" /> Built for audit
             </li>
           </ul>
         </div>
@@ -56,8 +56,8 @@ export function TechOrbit() {
         {/* orbit visualization */}
         <div className="relative mx-auto aspect-square w-full max-w-[460px]">
           {/* outer dashed ring */}
-          <div className="absolute inset-0 rounded-full border border-dashed border-cyan-300/15" />
-          <div className="absolute inset-[14%] rounded-full border border-dashed border-violet-300/15" />
+          <div className="absolute inset-0 rounded-full border border-dashed border-emerald-300/15" />
+          <div className="absolute inset-[14%] rounded-full border border-dashed border-green-300/15" />
           <div className="absolute inset-[34%] rounded-full border border-dashed border-emerald-300/15" />
 
           {/* outer ring icons - spinning slowly */}
@@ -114,11 +114,11 @@ export function TechOrbit() {
 
           {/* center core */}
           <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="relative flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-300/40 bg-gradient-to-br from-cyan-300/30 via-emerald-300/15 to-violet-300/30 backdrop-blur-xl">
-              <span className="pulse-ring absolute inset-0 rounded-full border border-cyan-300/50" />
-              <span className="pulse-ring absolute inset-0 rounded-full border border-violet-300/50" style={{ animationDelay: "1.2s" }} />
+            <div className="relative flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-emerald-300/40 bg-gradient-to-br from-emerald-300/30 via-emerald-300/15 to-green-300/30 backdrop-blur-xl">
+              <span className="pulse-ring absolute inset-0 rounded-full border border-emerald-300/50" />
+              <span className="pulse-ring absolute inset-0 rounded-full border border-green-300/50" style={{ animationDelay: "1.2s" }} />
               <div className="text-center">
-                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-cyan-200">core</div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-200">core</div>
                 <div className="mt-0.5 text-sm font-semibold text-white">Jungle OS</div>
               </div>
             </div>

@@ -121,7 +121,7 @@ export function AIDemoSection() {
               className={`flex gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}
             >
               {message.role === "assistant" && (
-                <span className="mt-0.5 rounded-full border border-cyan-300/30 bg-cyan-300/10 p-1.5 text-cyan-200">
+                <span className="mt-0.5 rounded-full border border-emerald-300/30 bg-emerald-300/10 p-1.5 text-emerald-200">
                   <Bot className="h-4 w-4" />
                 </span>
               )}
@@ -149,7 +149,7 @@ export function AIDemoSection() {
             <button
               key={prompt}
               onClick={() => submit(prompt)}
-              className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-100 transition hover:border-cyan-300/50"
+              className="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1.5 text-xs font-medium text-emerald-100 transition hover:border-emerald-300/50"
             >
               {prompt}
             </button>
@@ -164,11 +164,11 @@ export function AIDemoSection() {
               if (event.key === "Enter") submit(input);
             }}
             placeholder="Type your prompt..."
-            className="w-full rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-cyan-300/50"
+            className="w-full rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-emerald-300/50"
           />
           <button
             onClick={() => submit(input)}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-cyan-300 px-5 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-cyan-200"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-emerald-300 px-5 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-emerald-200"
           >
             Send
             <SendHorizonal className="h-4 w-4" />

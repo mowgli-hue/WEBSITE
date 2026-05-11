@@ -14,7 +14,7 @@ export function LeadIntentSection() {
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className="glass-card relative overflow-hidden p-6 md:p-8"
       >
-        <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-300/18 blur-3xl" />
+        <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-emerald-300/18 blur-3xl" />
         <div className="absolute -left-10 -bottom-20 h-52 w-52 rounded-full bg-emerald-300/14 blur-3xl" />
 
         <div className="relative grid gap-5 md:grid-cols-[1.25fr_0.75fr] md:items-center">
@@ -30,7 +30,7 @@ export function LeadIntentSection() {
           <a
             href="#ai-demo"
             onClick={() => trackEvent("chatbot_primary_cta_click", { placement: "lead_intent_strip" })}
-            className="inline-flex h-fit items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-cyan-300 px-6 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-cyan-200"
+            className="inline-flex h-fit items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-emerald-300 px-6 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-emerald-200"
           >
             <MessageSquareText className="h-4 w-4" />
             Use AI Chatbot

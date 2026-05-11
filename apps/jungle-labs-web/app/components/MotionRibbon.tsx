@@ -29,7 +29,7 @@ export function MotionRibbon() {
           {looped.map((item, index) => (
             <span
               key={`${item}-${index}`}
-              className="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] text-cyan-100"
+              className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] text-emerald-100"
             >
               {item}
             </span>

@@ -56,7 +56,7 @@ export function StorySection() {
           transition={{ duration: 0.25 }}
           className="glass-card relative overflow-hidden p-7 md:p-9"
         >
-          <div className="absolute -right-20 top-0 h-52 w-52 rounded-full bg-cyan-300/15 blur-3xl" />
+          <div className="absolute -right-20 top-0 h-52 w-52 rounded-full bg-emerald-300/15 blur-3xl" />
           <p className="section-kicker">Execution Promise</p>
           <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">From idea to deployment with zero ambiguity</h3>
           <p className="mt-4 leading-relaxed text-white/72">
@@ -65,19 +65,19 @@ export function StorySection() {
           </p>
           <div className="mt-7 grid grid-cols-2 gap-4">
             <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
-              <p className="text-xs uppercase tracking-[0.11em] text-cyan-100/70">Delivery Model</p>
+              <p className="text-xs uppercase tracking-[0.11em] text-emerald-100/70">Delivery Model</p>
               <p className="mt-2 text-white">Sprint-based</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
-              <p className="text-xs uppercase tracking-[0.11em] text-cyan-100/70">Reporting</p>
+              <p className="text-xs uppercase tracking-[0.11em] text-emerald-100/70">Reporting</p>
               <p className="mt-2 text-white">Weekly KPI Reviews</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
-              <p className="text-xs uppercase tracking-[0.11em] text-cyan-100/70">Architecture</p>
+              <p className="text-xs uppercase tracking-[0.11em] text-emerald-100/70">Architecture</p>
               <p className="mt-2 text-white">Discovery First</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
-              <p className="text-xs uppercase tracking-[0.11em] text-cyan-100/70">Support</p>
+              <p className="text-xs uppercase tracking-[0.11em] text-emerald-100/70">Support</p>
               <p className="mt-2 text-white">Post-Launch Care</p>
             </div>
           </div>

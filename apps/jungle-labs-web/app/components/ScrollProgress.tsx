@@ -12,8 +12,8 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 right-0 top-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300"
-      style={{ scaleX, boxShadow: "0 0 12px rgba(56,189,248,0.6)" }}
+      className="pointer-events-none fixed left-0 right-0 top-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-emerald-300 via-emerald-300 to-green-300"
+      style={{ scaleX, boxShadow: "0 0 12px rgba(34,197,94,0.6)" }}
       aria-hidden="true"
     />
   );

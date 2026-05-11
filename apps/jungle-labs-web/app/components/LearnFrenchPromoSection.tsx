@@ -5,13 +5,13 @@ import { AnimatedSection } from "./AnimatedSection";
 export function LearnFrenchPromoSection() {
   return (
     <AnimatedSection className="section-shell mt-20">
-      <div className="relative overflow-hidden rounded-[1.75rem] border border-sky-300/25 bg-gradient-to-br from-sky-500/20 via-cyan-500/10 to-emerald-400/15 p-7 md:p-9">
-        <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full bg-sky-300/25 blur-3xl" />
+      <div className="relative overflow-hidden rounded-[1.75rem] border border-emerald-300/25 bg-gradient-to-br from-emerald-500/20 via-emerald-500/10 to-emerald-400/15 p-7 md:p-9">
+        <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full bg-emerald-300/25 blur-3xl" />
         <div className="absolute -left-12 -bottom-16 h-52 w-52 rounded-full bg-emerald-300/20 blur-3xl" />
 
         <div className="relative grid gap-5 md:grid-cols-[1.2fr_0.8fr] md:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.13em] text-sky-100/90">Franco Learning App</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.13em] text-emerald-100/90">Franco Learning App</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Learn French Faster With AI Coaching</h2>
             <p className="mt-3 max-w-2xl text-white/80">
               Explore our dedicated French learning guide, compare methods, and download Franco for macOS or Windows.
@@ -20,7 +20,7 @@ export function LearnFrenchPromoSection() {
           <div className="flex flex-wrap gap-3 md:justify-end">
             <Link
               href="/learn-french"
-              className="inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-sky-100"
+              className="inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-emerald-100"
             >
               Read Learn French Guide
             </Link>

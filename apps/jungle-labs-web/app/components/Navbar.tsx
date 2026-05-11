@@ -28,9 +28,9 @@ export function Navbar() {
         initial={false}
         animate={{
           backgroundColor: scrolled ? "rgba(4,7,13,0.78)" : "rgba(0,0,0,0.45)",
-          borderColor: scrolled ? "rgba(56,189,248,0.28)" : "rgba(56,189,248,0.15)",
+          borderColor: scrolled ? "rgba(34,197,94,0.28)" : "rgba(34,197,94,0.15)",
           boxShadow: scrolled
-            ? "0 18px 40px -28px rgba(56,189,248,0.45), 0 8px 22px -18px rgba(52,211,153,0.35)"
+            ? "0 18px 40px -28px rgba(34,197,94,0.45), 0 8px 22px -18px rgba(52,211,153,0.35)"
             : "0 0 0 transparent"
         }}
         transition={{ duration: 0.35, ease: "easeOut" }}
@@ -47,19 +47,19 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative transition hover:text-cyan-300"
+                className="group relative transition hover:text-emerald-300"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-cyan-300 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-emerald-300 transition-all duration-300 group-hover:w-full" />
               </Link>
             ) : (
               <a
                 key={item.href}
                 href={item.href}
-                className="group relative transition hover:text-cyan-300"
+                className="group relative transition hover:text-emerald-300"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-cyan-300 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-emerald-300 transition-all duration-300 group-hover:w-full" />
               </a>
             )
           )}
@@ -79,7 +79,7 @@ export function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition hover:border-cyan-300/35 hover:text-cyan-200 lg:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition hover:border-emerald-300/35 hover:text-emerald-200 lg:hidden"
             onClick={() => setOpen((prev) => !prev)}
             aria-label={open ? "Close menu" : "Open menu"}
           >
@@ -105,7 +105,7 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-cyan-200"
+                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-emerald-200"
                   >
                     {item.label}
                   </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-cyan-200"
+                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-emerald-200"
                   >
                     {item.label}
                   </a>
@@ -127,7 +127,7 @@ export function Navbar() {
                     setOpen(false);
                     trackEvent("start_project_click", { placement: "navbar_mobile" });
                   }}
-                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-300/35 bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 px-4 py-2.5 text-sm font-semibold text-emerald-100 transition hover:from-emerald-400/30 hover:to-cyan-400/30"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-300/35 bg-gradient-to-r from-emerald-400/20 to-emerald-400/20 px-4 py-2.5 text-sm font-semibold text-emerald-100 transition hover:from-emerald-400/30 hover:to-emerald-400/30"
                 >
                   Start a Project
                 </a>
