@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import { CursorFollower } from "./components/CursorFollower";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
         <a href="#main-content" className="skip-to-content">Skip to content</a>
+        <CursorFollower />
         {children}
         <AnalyticsProvider />
       </body>

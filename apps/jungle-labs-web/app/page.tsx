@@ -4,6 +4,7 @@ import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
 import { LeadIntentSection } from "./components/LeadIntentSection";
 import { HeroSection } from "./components/HeroSection";
+import { MarqueeBand } from "./components/MarqueeBand";
 import { MotionRibbon } from "./components/MotionRibbon";
 import { Navbar } from "./components/Navbar";
 import { ProductsSection } from "./components/ProductsSection";
@@ -74,6 +75,7 @@ export default function HomePage() {
       <HeroSection />
       <MotionRibbon />
       <SocialProofBanner />
+      <MarqueeBand />
       <BlockchainShowcase />
       <TechOrbit />
       <LeadIntentSection />
