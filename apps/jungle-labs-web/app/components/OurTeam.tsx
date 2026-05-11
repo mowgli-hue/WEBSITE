@@ -73,7 +73,7 @@ export function OurTeam() {
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-bl from-transparent via-transparent to-black/30" />
             <Image
               src="/jungle-team.png"
-              alt="Jungle Labs team working together on a project plan in the jungle"
+              alt="Jungle Labs cross-functional product team collaborating on AI and blockchain projects"
               width={1536}
               height={1024}
               className="h-auto w-full"

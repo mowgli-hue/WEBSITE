@@ -31,7 +31,7 @@ export function TodaysPlan() {
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-transparent via-transparent to-[#04080e]" />
             <Image
               src="/jungle-monkeys-coding.png"
-              alt="Jungle Labs team coding on monitors with today's plan"
+              alt="Jungle Labs team building AI automation and analytics platforms"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 60vw"

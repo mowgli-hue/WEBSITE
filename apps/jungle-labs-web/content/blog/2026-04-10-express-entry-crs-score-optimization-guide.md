@@ -46,4 +46,4 @@ For applicants who want a detailed strategy, the PR Strategy Report provides a p
 
 Consultations are available to review profiles, identify the highest-leverage improvements, and select the right PNP streams where applicable.
 
-More information at the [Immigration Platform platform](/immigration-platform).
+More information at the [Jungle Labs services](/services).

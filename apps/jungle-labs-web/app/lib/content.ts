@@ -48,7 +48,7 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Solutions", href: "#blockchain" },
-  { label: "Work", href: "#products" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#contact" }
 ];
@@ -72,6 +72,17 @@ export const products: Product[] = [
         href: "https://github.com/mowgli-hue/Franco/releases/download/v0.1.1/Franco-Setup-0.1.0.exe"
       }
     ]
+  },
+  {
+    name: "Industry CRM Platform",
+    subtitle: "Fully Automated Vertical CRM",
+    description:
+      "A fully automated CRM platform designed for service industries — replacing repetitive intake, document handling, status tracking, and client communication with one intelligent system.",
+    badge: "CRM Automation",
+    status: "In Market",
+    highlights: ["Automated client intake and routing", "Document parsing and categorization", "Status engine with proactive notifications"],
+    ctaLabel: "See Case Study",
+    href: "/case-studies"
   },
   {
     name: "Tokenization Engine",

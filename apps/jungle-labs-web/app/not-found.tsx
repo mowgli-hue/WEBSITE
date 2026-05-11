@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const helpLinks = [
-  { label: "RepTrack — IRCC Portal Scanner", href: "/reptrack" },
-  { label: "Immigration Platform Platform", href: "/immigration-platform" },
+  { label: "Our Services — AI, Blockchain, Tokenization", href: "/services" },
+  { label: "Case Studies — Recent Work", href: "/case-studies" },
+  { label: "Solutions by Industry", href: "/solutions" },
   { label: "Jungle Table Ordering OS", href: "/jungle-table-ordering" },
   { label: "Learn French with Franco", href: "/learn-french" },
-  { label: "All Services", href: "/services" },
   { label: "Blog", href: "/blog" }
 ];
 
@@ -29,7 +29,7 @@ export default function NotFound() {
             404
           </p>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-cyan-200">
+            <span className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-emerald-200">
               Page Not Found
             </span>
             <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
@@ -41,17 +41,17 @@ export default function NotFound() {
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-cyan-300 px-6 py-3 text-sm font-semibold text-black transition hover:from-emerald-200 hover:to-cyan-200"
+                className="inline-flex items-center gap-2 rounded-md bg-emerald-400 px-6 py-3 text-sm font-semibold text-black transition hover:bg-emerald-300"
               >
                 <Home className="h-4 w-4" />
                 Back to Home
               </Link>
               <Link
-                href="/solutions"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/35 hover:text-cyan-200"
+                href="/services"
+                className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-transparent px-6 py-3 text-sm font-semibold text-white transition hover:border-emerald-300/50 hover:text-emerald-200"
               >
                 <Search className="h-4 w-4" />
-                Browse Solutions
+                Browse Services
               </Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function NotFound() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="glass-card flex items-center justify-between px-5 py-3 text-sm text-white/75 transition hover:text-cyan-200"
+                className="glass-card flex items-center justify-between px-5 py-3 text-sm text-white/75 transition hover:text-emerald-200"
               >
                 {link.label}
                 <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/30" />

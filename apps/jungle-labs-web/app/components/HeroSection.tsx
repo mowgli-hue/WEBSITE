@@ -232,7 +232,7 @@ export function HeroSection() {
 
             <Image
               src="/jungle-hero.png"
-              alt="Jungle Labs engineering team coding in an immersive jungle workstation"
+              alt="Jungle Labs AI and blockchain development team in Surrey, BC working on intelligent systems"
               width={1536}
               height={1024}
               priority

@@ -2,6 +2,7 @@ import { AIDemoSection } from "./components/AIDemoSection";
 import { BlockchainShowcase } from "./components/BlockchainShowcase";
 import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
+import { FAQSection } from "./components/FAQSection";
 import { HeroSection } from "./components/HeroSection";
 import { HowWeWork } from "./components/HowWeWork";
 import { LeadIntentSection } from "./components/LeadIntentSection";
@@ -19,60 +20,33 @@ import { SocialProofBanner } from "./components/SocialProofBanner";
 import { StorySection } from "./components/StorySection";
 import { SystemsSection } from "./components/SystemsSection";
 import { TechOrbit } from "./components/TechOrbit";
+import { TestimonialsSection } from "./components/TestimonialsSection";
 import { TodaysPlan } from "./components/TodaysPlan";
 import { ChatbotFab } from "./components/ChatbotFab";
 import { LearnFrenchPromoSection } from "./components/LearnFrenchPromoSection";
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Jungle Labs",
-  url: "https://www.junglelabsworld.ca",
-  email: "admin@junglelabsworld.com",
-  telephone: "+1-604-902-8699",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "9850 King George Blvd",
-    addressLocality: "Surrey",
-    addressRegion: "BC",
-    postalCode: "V3T 0P9",
-    addressCountry: "CA"
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/jungle-labs-world",
-    "https://www.instagram.com/junglelabsworld/",
-    "https://www.facebook.com/junglelabsworld/"
-  ],
-  knowsAbout: [
-    "AI Automation",
-    "Blockchain Development",
-    "Tokenization Platforms",
-    "Smart Contracts",
-    "Web3 Integration",
-    "Custom CRM Systems",
-    "Software Development",
-    "Analytics Platforms",
-    "Business Workflow Automation",
-    "Restaurant Technology",
-    "Kitchen Display Systems",
-    "French Language Learning Apps"
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Jungle Labs Products",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Franco App", url: "https://www.junglelabsworld.ca" } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Tokenization Engine", url: "https://www.junglelabsworld.ca#blockchain" } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Smart Contract Studio", url: "https://www.junglelabsworld.ca#blockchain" } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Jungle Table Ordering OS", url: "https://www.junglelabsworld.ca/jungle-table-ordering" } }
-    ]
-  }
-};
+import {
+  localBusinessSchema,
+  homepageFAQSchema,
+  reviewSchemas,
+  websiteSchema,
+  breadcrumbSchema
+} from "./lib/schemas";
 
 export default function HomePage() {
+  const breadcrumbs = breadcrumbSchema([{ name: "Home", href: "/" }]);
+
   return (
     <main id="main-content">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      {/* SEO structured data — all schemas grouped at top */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFAQSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      {reviewSchemas.map((schema, i) => (
+        <script key={`review-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
+
       <ScrollProgress />
       <Navbar />
       <HeroSection />
@@ -86,11 +60,13 @@ export default function HomePage() {
       <StorySection />
       <ProductsSection />
       <ServicesSection />
+      <TestimonialsSection />
       <OurTeam />
       <SeoKeywordSection />
       <EcosystemSection />
       <SystemsSection />
       <RoadmapSection />
+      <FAQSection />
       <TodaysPlan />
       <LearnFrenchPromoSection />
       <AIDemoSection />

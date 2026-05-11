@@ -61,7 +61,7 @@ export function HowWeWork() {
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-black/40 via-transparent to-transparent" />
             <Image
               src="/jungle-chimp-waterfall.png"
-              alt="Jungle Labs engineer at jungle workstation with code/train/optimize/deploy/repeat signs"
+              alt="Jungle Labs software development process: code, train, optimize, deploy, repeat"
               width={1536}
               height={1024}
               className="h-auto w-full"
