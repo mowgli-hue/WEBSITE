@@ -11,26 +11,22 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.junglelabsworld.ca"),
   title: {
-    default: "Jungle Labs | AI Software, Fitness Tech & Immigration Platforms",
+    default: "Jungle Labs | AI, Blockchain & Tokenization Studio",
     template: "%s | Jungle Labs"
   },
   description:
-    "Jungle Labs builds AI automation systems, custom software platforms, and digital products — including RepTrack (fitness tracker), Immigration Platform (Canada PR platform), and Jungle Table Ordering OS (restaurant tech).",
+    "Jungle Labs builds AI automation systems, blockchain platforms, tokenization engines, custom software, and digital products that drive real-world impact for modern businesses.",
   keywords: [
     "Jungle Labs",
     "AI automation",
+    "blockchain development",
+    "tokenization platform",
+    "smart contracts",
+    "Web3 integration",
     "custom CRM",
     "analytics dashboards",
     "software development",
     "business intelligence",
-    "RepTrack",
-    "IRCC portal scanner",
-    "RCIC software",
-    "immigration consultant tool",
-    "Immigration Platform",
-    "immigration consultant Surrey BC",
-    "Express Entry Canada",
-    "CRS calculator",
     "restaurant tablet ordering system",
     "kitchen display system",
     "Franco French learning app",
@@ -46,16 +42,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "Jungle Labs | AI Software, Fitness Tech & Immigration Platforms",
+    title: "Jungle Labs | AI, Blockchain & Tokenization Studio",
     description:
-      "Building intelligent digital products: RepTrack fitness tracker, Immigration Platform platform, Jungle Table Ordering OS, and AI automation systems for modern businesses.",
+      "Building intelligent digital systems: AI automation, blockchain platforms, tokenization engines, smart contracts, and analytics for modern businesses.",
     siteName: "Jungle Labs",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Jungle Labs — AI Software & Digital Products" }]
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Jungle Labs — AI, Blockchain & Tokenization Studio" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jungle Labs | AI Software, Fitness Tech & Immigration Platforms",
-    description: "RepTrack, Immigration Platform, Jungle Table Ordering OS, and AI automation — digital products built by Jungle Labs.",
+    title: "Jungle Labs | AI, Blockchain & Tokenization Studio",
+    description: "AI automation, blockchain platforms, tokenization engines, smart contracts — built by Jungle Labs.",
     images: ["/twitter-image"]
   },
   icons: {

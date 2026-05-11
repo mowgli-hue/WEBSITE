@@ -1,4 +1,5 @@
 import { AIDemoSection } from "./components/AIDemoSection";
+import { BlockchainShowcase } from "./components/BlockchainShowcase";
 import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
 import { LeadIntentSection } from "./components/LeadIntentSection";
@@ -7,12 +8,14 @@ import { MotionRibbon } from "./components/MotionRibbon";
 import { Navbar } from "./components/Navbar";
 import { ProductsSection } from "./components/ProductsSection";
 import { RoadmapSection } from "./components/RoadmapSection";
+import { ScrollProgress } from "./components/ScrollProgress";
 import { ServicesSection } from "./components/ServicesSection";
 import { SeoKeywordSection } from "./components/SeoKeywordSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { SocialProofBanner } from "./components/SocialProofBanner";
 import { StorySection } from "./components/StorySection";
 import { SystemsSection } from "./components/SystemsSection";
+import { TechOrbit } from "./components/TechOrbit";
 import { ChatbotFab } from "./components/ChatbotFab";
 import { LearnFrenchPromoSection } from "./components/LearnFrenchPromoSection";
 
@@ -38,14 +41,14 @@ const orgSchema = {
   ],
   knowsAbout: [
     "AI Automation",
+    "Blockchain Development",
+    "Tokenization Platforms",
+    "Smart Contracts",
+    "Web3 Integration",
     "Custom CRM Systems",
     "Software Development",
     "Analytics Platforms",
     "Business Workflow Automation",
-    "Workout Tracking Apps",
-    "Fitness Technology",
-    "Immigration Consulting Technology",
-    "Express Entry Canada",
     "Restaurant Technology",
     "Kitchen Display Systems",
     "French Language Learning Apps"
@@ -55,8 +58,8 @@ const orgSchema = {
     name: "Jungle Labs Products",
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Franco App", url: "https://www.junglelabsworld.ca" } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "RepTrack", url: "https://www.junglelabsworld.ca/reptrack" } },
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Immigration Platform", url: "https://www.junglelabsworld.ca/immigration-platform" } },
+      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Tokenization Engine", url: "https://www.junglelabsworld.ca#blockchain" } },
+      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Smart Contract Studio", url: "https://www.junglelabsworld.ca#blockchain" } },
       { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "Jungle Table Ordering OS", url: "https://www.junglelabsworld.ca/jungle-table-ordering" } }
     ]
   }
@@ -66,10 +69,13 @@ export default function HomePage() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <ScrollProgress />
       <Navbar />
       <HeroSection />
       <MotionRibbon />
       <SocialProofBanner />
+      <BlockchainShowcase />
+      <TechOrbit />
       <LeadIntentSection />
       <StorySection />
       <ProductsSection />

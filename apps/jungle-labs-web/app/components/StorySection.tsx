@@ -20,7 +20,7 @@ const stats = [
 
 export function StorySection() {
   return (
-    <AnimatedSection className="section-shell mt-24">
+    <AnimatedSection id="about" className="section-shell mt-24">
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="glass-card p-7 md:p-9">
           <p className="section-kicker">Why Jungle Labs</p>

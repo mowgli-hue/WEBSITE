@@ -20,10 +20,10 @@ const responses: Record<string, string> = {
     "We define your pipeline stages, client lifecycle, and team permissions, then ship a custom CRM aligned to your exact operations.",
   "create analytics dashboard":
     "We build a live metrics layer with KPI trees, budget-to-revenue visibility, and executive-ready decision views.",
-  "track gym workouts":
-    "RepTrack is our gym progress tracker — log every set, rep, and weight, get progressive overload alerts, and track personal records over time. Visit /reptrack to learn more or join the waitlist.",
-  "immigration platform":
-    "Immigration Platform is our AI-powered Canada immigration platform with CRS calculator, Express Entry guidance, and consultation booking. RepTrack is our IRCC portal scanner — it auto-scans your entire representative queue, downloads PDFs, and tracks approvals so consultants save 3+ hours daily. Visit reptrack.ca or /immigration-platform to learn more."
+  "tokenize my asset":
+    "We design a token standard fit to your asset class, build the smart contracts and minting flows, and wire in compliance, custody, and audit trails so issuance is production-safe from day one.",
+  "build a blockchain platform":
+    "We architect chain-agnostic infrastructure — smart contracts, wallets, signing flows, and ledger pipelines — then integrate it cleanly with your existing CRM, AI, and analytics stack."
 };
 
 function resolveReply(input: string) {

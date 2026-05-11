@@ -7,14 +7,16 @@ type AnimatedCounterProps = {
   value: number;
   suffix?: string;
   duration?: number;
+  decimals?: number;
 };
 
-export function AnimatedCounter({ value, suffix = "", duration = 1.6 }: AnimatedCounterProps) {
+export function AnimatedCounter({ value, suffix = "", duration = 1.6, decimals = 0 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
   const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
-  const [display, setDisplay] = useState(0);
+  const factor = Math.pow(10, decimals);
+  const rounded = useTransform(count, (latest) => Math.round(latest * factor) / factor);
+  const [display, setDisplay] = useState<number>(0);
 
   useEffect(() => {
     if (!isInView) return;
@@ -27,5 +29,10 @@ export function AnimatedCounter({ value, suffix = "", duration = 1.6 }: Animated
     return () => unsubscribe();
   }, [rounded]);
 
-  return <span ref={ref}>{display}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {decimals > 0 ? display.toFixed(decimals) : Math.round(display)}
+      {suffix}
+    </span>
+  );
 }

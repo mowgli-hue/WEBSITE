@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const items = [
   "AI Automation",
+  "Blockchain Infrastructure",
+  "Tokenization Platforms",
+  "Smart Contracts",
   "Custom CRM",
-  "RepTrack · IRCC Portal Scanner",
   "Analytics Infrastructure",
-  "Immigration Platform · Canada PR",
   "Lead Generation Systems",
-  "Jungle Table Ordering OS",
+  "Web3 Integration",
   "Mobile + Web Platforms",
-  "Franco · Learn French with AI",
   "Business Intelligence"
 ];
 

@@ -5,9 +5,9 @@ import { BrandLogo } from "./BrandLogo";
 
 const footerProducts = [
   { label: "Franco App", href: "/" },
-  { label: "RepTrack", href: "/reptrack" },
-  { label: "Immigration Platform", href: "/immigration-platform" },
+  { label: "Business Budget Intelligence", href: "/services" },
   { label: "Jungle Table Ordering OS", href: "/jungle-table-ordering" },
+  { label: "Blockchain Platform", href: "#blockchain" },
 ];
 
 const footerServices = [
@@ -40,7 +40,7 @@ export function SiteFooter() {
           <div>
             <BrandLogo width={180} height={46} className="h-10 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
-              AI automation, custom software, and digital products for modern businesses — including RepTrack, Immigration Platform, and Jungle Table Ordering OS.
+              AI automation, blockchain platforms, tokenization engines, and custom software for modern businesses building the next generation of digital infrastructure.
             </p>
             <div className="mt-5 space-y-2 text-sm text-white/60">
               <p className="inline-flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-cyan-300" /> Surrey, BC, Canada</p>

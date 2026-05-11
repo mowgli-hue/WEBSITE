@@ -1,14 +1,14 @@
 import {
   Bot,
+  Boxes,
   BrainCircuit,
   ChartNoAxesCombined,
   Compass,
   Database,
   FileCode2,
   Globe,
-  GraduationCap,
-  LayoutDashboard,
   Megaphone,
+  Network,
   Workflow
 } from "lucide-react";
 
@@ -44,11 +44,11 @@ export type SocialLink = {
 };
 
 export const navLinks = [
-  { label: "Products", href: "#products" },
+  { label: "Home", href: "#" },
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "RepTrack", href: "/reptrack" },
-  { label: "Immigration Platform", href: "/immigration-platform" },
-  { label: "Learn French", href: "/learn-french" },
+  { label: "Solutions", href: "#blockchain" },
+  { label: "Work", href: "#products" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#contact" }
 ];
@@ -74,8 +74,30 @@ export const products: Product[] = [
     ]
   },
   {
-    name: "Business Budget Intelligence Platform",
-    subtitle: "Business Budget + Growth Intelligence",
+    name: "Tokenization Engine",
+    subtitle: "Programmable Asset Platform",
+    description:
+      "Turn real-world assets, loyalty points, or equity into compliant on-chain tokens with custody and audit built in.",
+    badge: "Blockchain",
+    status: "Active Build",
+    highlights: ["Asset-class flexible", "Custody patterns built in", "Audit-ready reporting"],
+    ctaLabel: "Request Early Access",
+    href: "mailto:admin@junglelabsworld.com?subject=Tokenization%20Engine%20Access"
+  },
+  {
+    name: "Smart Contract Studio",
+    subtitle: "On-Chain Development Platform",
+    description:
+      "Smart contract templates, deployment pipelines, and a wallet-aware test harness so on-chain shipping feels like normal CI/CD.",
+    badge: "Blockchain",
+    status: "Active Build",
+    highlights: ["Contract templates", "Wallet-aware test harness", "Deploy pipelines"],
+    ctaLabel: "Request Early Access",
+    href: "mailto:admin@junglelabsworld.com?subject=Smart%20Contract%20Studio%20Access"
+  },
+  {
+    name: "Business Budget Intelligence",
+    subtitle: "Budget + Growth Intelligence",
     description:
       "A live analytics workspace for business budgeting, marketing spend efficiency, and growth forecasting.",
     badge: "Analytics Platform",
@@ -93,28 +115,6 @@ export const products: Product[] = [
     status: "Active Build",
     highlights: ["Table-side ordering UI", "Kitchen display system", "Realtime staff call and order status"],
     href: "/jungle-table-ordering"
-  },
-  {
-    name: "RepTrack",
-    subtitle: "IRCC Portal Scanner for RCICs",
-    description:
-      "A Chrome extension that automatically scans your entire IRCC representative portal for new messages, downloads PDFs, and tracks approvals — saving consultants 3+ hours every day.",
-    badge: "Immigration Tech",
-    status: "In Market",
-    highlights: ["Scan 2,000+ applications in one click", "Auto-download and name PDFs", "Approval, refusal & request letter tracking"],
-    href: "https://www.reptrack.ca",
-    ctaLabel: "Visit RepTrack"
-  },
-  {
-    name: "Immigration Platform",
-    subtitle: "AI-Powered Immigration Platform",
-    description:
-      "A full-service immigration platform with CRS calculator, AI advisor, program matching, and consultation booking for Canada and USA pathways.",
-    badge: "Immigration Tech",
-    status: "Deployed",
-    highlights: ["CRS score calculator", "AI immigration advisor", "Express Entry & PNP program matching"],
-    href: "/immigration-platform",
-    ctaLabel: "Explore Platform"
   }
 ];
 
@@ -127,6 +127,20 @@ export const services: Service[] = [
     icon: Bot
   },
   {
+    title: "Blockchain & Smart Contracts",
+    short: "Production-grade on-chain infrastructure.",
+    details:
+      "Smart contracts, wallets, signing flows, and ledger integrations that connect cleanly to your existing stack.",
+    icon: Network
+  },
+  {
+    title: "Tokenization Platforms",
+    short: "Turn assets, loyalty, and equity into tokens.",
+    details:
+      "Asset tokenization engines with compliance hooks, custody patterns, and audit-ready reporting built in.",
+    icon: Boxes
+  },
+  {
     title: "Custom CRM Systems",
     short: "Build your CRM around your exact process.",
     details:
@@ -134,11 +148,11 @@ export const services: Service[] = [
     icon: Database
   },
   {
-    title: "Website Design & Development",
-    short: "Get your website created as you like.",
+    title: "Analytics Platforms",
+    short: "Transform data into decisions in real time.",
     details:
-      "We build modern, fast, conversion-focused websites tailored to your brand, offers, and customer journey.",
-    icon: Globe
+      "Executive dashboards, KPI engines, and reporting systems that explain where growth is happening and why.",
+    icon: ChartNoAxesCombined
   },
   {
     title: "Custom Software Development",
@@ -148,11 +162,11 @@ export const services: Service[] = [
     icon: FileCode2
   },
   {
-    title: "Analytics Platforms",
-    short: "Transform data into decisions in real time.",
+    title: "Website Design & Development",
+    short: "Conversion-focused websites tailored to your brand.",
     details:
-      "Executive dashboards, KPI engines, and reporting systems that explain where growth is happening and why.",
-    icon: ChartNoAxesCombined
+      "We build modern, fast, conversion-focused websites tailored to your brand, offers, and customer journey.",
+    icon: Globe
   },
   {
     title: "Business Workflow Automation",
@@ -174,18 +188,19 @@ export const ecosystemNodes = [
 
 export const systemsWeBuild: BuildSystem[] = [
   { title: "AI Lead Generation Systems", icon: Megaphone },
+  { title: "Blockchain & Smart Contracts", icon: Network },
+  { title: "Tokenization Platforms", icon: Boxes },
   { title: "Client Intake Systems", icon: Compass },
-  { title: "Immigration CRM Platforms", icon: LayoutDashboard },
-  { title: "Education Platforms", icon: GraduationCap },
   { title: "AI Content Systems", icon: BrainCircuit },
   { title: "Business Intelligence Dashboards", icon: ChartNoAxesCombined }
 ];
 
 export const roadmap = [
   { year: "2025", title: "Franco App", detail: "Launched with AI reflex learning and structured speaking progression for French learners." },
-  { year: "2025–2026", title: "Immigration Platform", detail: "AI-powered immigration platform deployed with CRS calculator, Express Entry guidance, and consultation booking." },
-  { year: "2026", title: "RepTrack", detail: "IRCC portal scanner for RCICs launched — auto-scans applications, downloads PDFs, and tracks approvals so immigration consultants save 3+ hours daily." },
+  { year: "2025–2026", title: "AI Automation Studio", detail: "Deployed AI agent systems and workflow automation for service businesses across North America." },
+  { year: "2026", title: "Tokenization Engine", detail: "Rolling out programmable asset tokenization with built-in compliance, custody, and audit reporting." },
   { year: "2026", title: "Budget Intelligence Platform", detail: "Rolling out business budget intelligence and decision dashboards for marketing ROI and growth forecasting." },
+  { year: "2026", title: "Smart Contract Studio", detail: "Launching contract templates, wallet-aware test harness, and deploy pipelines for on-chain teams." },
   { year: "2026–2027", title: "Jungle Table Ordering OS", detail: "Deploying tablet-based restaurant ordering, kitchen display workflows, and real-time waiter routing." }
 ];
 
@@ -193,8 +208,8 @@ export const demoSuggestions = [
   "Automate my business",
   "Build a CRM system",
   "Create analytics dashboard",
-  "Track gym workouts",
-  "Immigration platform"
+  "Tokenize my asset",
+  "Build a blockchain platform"
 ];
 
 export const socialLinks: SocialLink[] = [
