@@ -1,5 +1,6 @@
 import { AIDemoSection } from "./components/AIDemoSection";
 import { BlockchainShowcase } from "./components/BlockchainShowcase";
+import { BrandBanner } from "./components/BrandBanner";
 import { BuiltForScale } from "./components/BuiltForScale";
 import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
@@ -8,6 +9,7 @@ import { HeroSection } from "./components/HeroSection";
 import { HowWeWork } from "./components/HowWeWork";
 import { LeadIntentSection } from "./components/LeadIntentSection";
 import { MarqueeBand } from "./components/MarqueeBand";
+import { MobileFirstShowcase } from "./components/MobileFirstShowcase";
 import { Navbar } from "./components/Navbar";
 import { OurTeam } from "./components/OurTeam";
 import { ProductsSection } from "./components/ProductsSection";
@@ -56,8 +58,10 @@ export default function HomePage() {
       <TechOrbit />
       <LeadIntentSection />
       <StorySection />
+      <BrandBanner />
       <ProductsSection />
       <ServicesSection />
+      <MobileFirstShowcase />
       <TestimonialsSection />
       <OurTeam />
       <SeoKeywordSection />
