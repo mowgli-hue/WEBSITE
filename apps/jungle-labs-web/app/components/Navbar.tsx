@@ -23,68 +23,66 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-4 z-50 section-shell">
+    <header className="sticky top-0 z-50">
       <motion.nav
         initial={false}
         animate={{
-          backgroundColor: scrolled ? "rgba(4,7,13,0.78)" : "rgba(0,0,0,0.45)",
-          borderColor: scrolled ? "rgba(34,197,94,0.28)" : "rgba(34,197,94,0.15)",
-          boxShadow: scrolled
-            ? "0 18px 40px -28px rgba(34,197,94,0.45), 0 8px 22px -18px rgba(52,211,153,0.35)"
-            : "0 0 0 transparent"
+          backgroundColor: scrolled ? "rgba(3,6,12,0.92)" : "rgba(3,6,12,0.55)",
+          borderBottomColor: scrolled ? "rgba(34,197,94,0.18)" : "rgba(255,255,255,0.05)"
         }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className="mt-4 flex items-center justify-between rounded-full border px-5 py-3 backdrop-blur-xl"
+        className="w-full border-b backdrop-blur-xl"
       >
-        <Link href="/" className="inline-flex items-center gap-2 text-base font-semibold tracking-tight text-white">
-          <BrandLogo width={48} height={48} className="h-10 w-10" priority />
-        </Link>
+        <div className="section-wide flex items-center justify-between py-4">
+          {/* Logo + wordmark */}
+          <Link href="/" className="inline-flex items-center gap-3 text-white">
+            <BrandLogo width={42} height={42} className="h-10 w-10" priority />
+            <span className="hidden text-lg font-bold uppercase tracking-[0.18em] text-white sm:inline">
+              Jungle Labs
+            </span>
+          </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 text-sm text-white/75 lg:flex">
-          {navLinks.map((item) =>
-            item.href.startsWith("/") ? (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="group relative transition hover:text-emerald-300"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-emerald-300 transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ) : (
-              <a
-                key={item.href}
-                href={item.href}
-                className="group relative transition hover:text-emerald-300"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-emerald-300 to-emerald-300 transition-all duration-300 group-hover:w-full" />
-              </a>
-            )
-          )}
-        </div>
+          {/* Desktop nav */}
+          <div className="hidden items-center gap-8 lg:flex">
+            {navLinks.map((item) => {
+              const isAnchor = item.href.startsWith("#");
+              const Tag: React.ElementType = isAnchor ? "a" : Link;
+              return (
+                <Tag
+                  key={item.href}
+                  href={item.href}
+                  className="group relative text-xs font-bold uppercase tracking-[0.22em] text-white/80 transition hover:text-emerald-400"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-emerald-400 transition-all duration-300 group-hover:w-full" />
+                </Tag>
+              );
+            })}
+          </div>
 
-        <div className="flex items-center gap-3">
-          <motion.a
-            href="#contact"
-            onClick={() => trackEvent("start_project_click", { placement: "navbar" })}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="shimmer-btn hidden items-center gap-2 rounded-xl border border-emerald-300/40 bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200 transition hover:bg-emerald-400/10 sm:inline-flex"
-          >
-            Get in Touch
-            <ArrowRight className="h-3.5 w-3.5" />
-          </motion.a>
+          {/* CTA + mobile hamburger */}
+          <div className="flex items-center gap-3">
+            <motion.a
+              href="#contact"
+              onClick={() => trackEvent("lets_build_click", { placement: "navbar" })}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="group hidden items-center gap-3 rounded-md border-2 border-emerald-400 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-400 transition hover:bg-emerald-400 hover:text-black sm:inline-flex"
+            >
+              Let&apos;s Build
+              <span className="flex h-6 w-6 items-center justify-center rounded border border-emerald-400 transition group-hover:border-black/40">
+                <ArrowRight className="h-3 w-3" />
+              </span>
+            </motion.a>
 
-          {/* Mobile hamburger */}
-          <button
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition hover:border-emerald-300/35 hover:text-emerald-200 lg:hidden"
-            onClick={() => setOpen((prev) => !prev)}
-            aria-label={open ? "Close menu" : "Open menu"}
-          >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
+            <button
+              className="inline-flex items-center justify-center rounded-md border border-white/15 bg-white/5 p-2 text-white/80 transition hover:border-emerald-300/35 hover:text-emerald-200 lg:hidden"
+              onClick={() => setOpen((prev) => !prev)}
+              aria-label={open ? "Close menu" : "Open menu"}
+            >
+              {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -92,46 +90,38 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -8, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.98 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="mx-4 mt-2 rounded-2xl border border-white/10 bg-black/85 p-4 backdrop-blur-xl lg:hidden"
+            className="border-b border-white/10 bg-black/90 backdrop-blur-xl lg:hidden"
           >
-            <div className="flex flex-col gap-1">
-              {navLinks.map((item) =>
-                item.href.startsWith("/") ? (
-                  <Link
+            <div className="section-wide flex flex-col gap-1 py-4">
+              {navLinks.map((item) => {
+                const isAnchor = item.href.startsWith("#");
+                const Tag: React.ElementType = isAnchor ? "a" : Link;
+                return (
+                  <Tag
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-emerald-200"
+                    className="rounded-md px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-white/80 transition hover:bg-white/5 hover:text-emerald-300"
                   >
                     {item.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-emerald-200"
-                  >
-                    {item.label}
-                  </a>
-                )
-              )}
-              <div className="mt-2 border-t border-white/10 pt-3">
-                <a
-                  href="#contact"
-                  onClick={() => {
-                    setOpen(false);
-                    trackEvent("start_project_click", { placement: "navbar_mobile" });
-                  }}
-                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-300/35 bg-gradient-to-r from-emerald-400/20 to-emerald-400/20 px-4 py-2.5 text-sm font-semibold text-emerald-100 transition hover:from-emerald-400/30 hover:to-emerald-400/30"
-                >
-                  Start a Project
-                </a>
-              </div>
+                  </Tag>
+                );
+              })}
+              <a
+                href="#contact"
+                onClick={() => {
+                  setOpen(false);
+                  trackEvent("lets_build_click", { placement: "navbar_mobile" });
+                }}
+                className="mt-2 inline-flex items-center justify-center gap-3 rounded-md border-2 border-emerald-400 px-4 py-3 text-xs font-bold uppercase tracking-[0.18em] text-emerald-400 transition hover:bg-emerald-400 hover:text-black"
+              >
+                Let&apos;s Build
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
             </div>
           </motion.div>
         )}

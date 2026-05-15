@@ -1,5 +1,6 @@
 import { AIDemoSection } from "./components/AIDemoSection";
 import { BlockchainShowcase } from "./components/BlockchainShowcase";
+import { BuiltForScale } from "./components/BuiltForScale";
 import { ContactCTA } from "./components/ContactCTA";
 import { EcosystemSection } from "./components/EcosystemSection";
 import { FAQSection } from "./components/FAQSection";
@@ -7,7 +8,6 @@ import { HeroSection } from "./components/HeroSection";
 import { HowWeWork } from "./components/HowWeWork";
 import { LeadIntentSection } from "./components/LeadIntentSection";
 import { MarqueeBand } from "./components/MarqueeBand";
-import { MotionRibbon } from "./components/MotionRibbon";
 import { Navbar } from "./components/Navbar";
 import { OurTeam } from "./components/OurTeam";
 import { ProductsSection } from "./components/ProductsSection";
@@ -16,7 +16,6 @@ import { ScrollProgress } from "./components/ScrollProgress";
 import { ServicesSection } from "./components/ServicesSection";
 import { SeoKeywordSection } from "./components/SeoKeywordSection";
 import { SiteFooter } from "./components/SiteFooter";
-import { SocialProofBanner } from "./components/SocialProofBanner";
 import { StorySection } from "./components/StorySection";
 import { SystemsSection } from "./components/SystemsSection";
 import { TechOrbit } from "./components/TechOrbit";
@@ -50,8 +49,7 @@ export default function HomePage() {
       <ScrollProgress />
       <Navbar />
       <HeroSection />
-      <MotionRibbon />
-      <SocialProofBanner />
+      <BuiltForScale />
       <MarqueeBand />
       <HowWeWork />
       <BlockchainShowcase />

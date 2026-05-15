@@ -44,12 +44,10 @@ export type SocialLink = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#blockchain" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Blog", href: "/blog" },
+  { label: "Systems", href: "#built-for-scale" },
+  { label: "Work", href: "/case-studies" },
   { label: "Contact", href: "#contact" }
 ];
 
