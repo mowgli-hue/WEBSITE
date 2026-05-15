@@ -111,10 +111,10 @@ export function HeroSection() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Layered gradients — strong fade on left so text is readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(34,197,94,0.18),_transparent_60%)]" />
+        {/* Layered gradients — softened fade on left so dashboards stay partially visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/55 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_right,_rgba(34,197,94,0.15),_transparent_55%)]" />
       </div>
 
       <div className="section-wide relative pt-20 pb-12 md:pt-28 md:pb-20 lg:pt-36 lg:pb-28">

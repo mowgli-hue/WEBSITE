@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, Bot, Database, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Database, Zap } from "lucide-react";
+import Image from "next/image";
 
 import { AnimatedSection } from "./AnimatedSection";
 
@@ -16,115 +17,6 @@ const pillars = [
   { Icon: Database, label: "Systems" },
   { Icon: BarChart3, label: "Growth" }
 ];
-
-/**
- * Central brain-chip SVG visual.
- * Inspired by the reference: glowing brain on a chip surrounded by data pathways.
- */
-function BrainChipVisual() {
-  return (
-    <div className="relative mx-auto aspect-square w-full max-w-md">
-      {/* Pulsing rings */}
-      <div className="pointer-events-none absolute inset-[18%] rounded-full border border-emerald-400/15">
-        <span className="pulse-ring absolute inset-0 rounded-full border border-emerald-400/30" />
-      </div>
-      <div className="pointer-events-none absolute inset-[6%] rounded-full border border-emerald-400/10">
-        <span className="pulse-ring absolute inset-0 rounded-full border border-emerald-400/20" style={{ animationDelay: "1.2s" }} />
-      </div>
-
-      <svg viewBox="0 0 400 400" className="relative h-full w-full" aria-hidden="true">
-        <defs>
-          <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="rgba(74,222,128,0.9)" />
-            <stop offset="60%" stopColor="rgba(74,222,128,0.4)" />
-            <stop offset="100%" stopColor="rgba(34,197,94,0)" />
-          </radialGradient>
-          <linearGradient id="chipGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#0a0f0c" />
-            <stop offset="100%" stopColor="#040806" />
-          </linearGradient>
-          <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="rgba(74,222,128,0.05)" />
-            <stop offset="50%" stopColor="rgba(74,222,128,0.7)" />
-            <stop offset="100%" stopColor="rgba(74,222,128,0.05)" />
-          </linearGradient>
-        </defs>
-
-        {/* Circuit board background */}
-        <g opacity="0.4">
-          {/* Vertical pathways radiating from chip */}
-          {[60, 100, 140, 260, 300, 340].map((x) => (
-            <line key={`v-${x}`} x1={x} y1="220" x2={x} y2={x > 200 ? 380 : 380} stroke="url(#pathGrad)" strokeWidth="1" className="dash-flow" />
-          ))}
-          {/* Connection nodes */}
-          {[60, 100, 140, 260, 300, 340].map((x) => (
-            <circle key={`n-${x}`} cx={x} cy="378" r="3" fill="#4ade80">
-              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin={`${x * 0.005}s`} repeatCount="indefinite" />
-            </circle>
-          ))}
-        </g>
-
-        {/* Chip base */}
-        <g transform="translate(120, 200)">
-          <rect x="0" y="0" width="160" height="80" rx="8" fill="url(#chipGrad)" stroke="#4ade80" strokeWidth="1.5" />
-          {/* chip pins */}
-          {[10, 25, 40, 55, 70, 85, 100, 115, 130, 145].map((x) => (
-            <rect key={`pin-${x}`} x={x} y="-4" width="3" height="4" fill="#4ade80" opacity="0.7" />
-          ))}
-          {[10, 25, 40, 55, 70, 85, 100, 115, 130, 145].map((x) => (
-            <rect key={`pin2-${x}`} x={x} y="80" width="3" height="4" fill="#4ade80" opacity="0.7" />
-          ))}
-          {/* center glow square */}
-          <rect x="60" y="20" width="40" height="40" rx="4" fill="url(#brainGlow)" />
-          <rect x="60" y="20" width="40" height="40" rx="4" fill="none" stroke="#4ade80" strokeWidth="1" />
-          <text x="80" y="46" textAnchor="middle" fill="#bbf7d0" fontSize="11" fontWeight="700">AI</text>
-        </g>
-
-        {/* Brain icon hovering above chip */}
-        <g transform="translate(200, 130)">
-          {/* Brain glow */}
-          <circle cx="0" cy="0" r="60" fill="url(#brainGlow)" opacity="0.7" />
-
-          {/* Stylized brain — two hemispheres made of curves */}
-          <g filter="url(#none)">
-            <path
-              d="M -28 -12 C -38 -8, -38 4, -28 10 C -32 18, -22 24, -14 20 C -10 26, 0 26, 0 22 L 0 -22 C -6 -28, -22 -22, -28 -12 Z"
-              fill="rgba(74,222,128,0.18)"
-              stroke="#4ade80"
-              strokeWidth="2"
-            />
-            <path
-              d="M 28 -12 C 38 -8, 38 4, 28 10 C 32 18, 22 24, 14 20 C 10 26, 0 26, 0 22 L 0 -22 C 6 -28, 22 -22, 28 -12 Z"
-              fill="rgba(74,222,128,0.18)"
-              stroke="#4ade80"
-              strokeWidth="2"
-            />
-            {/* Brain ridges */}
-            <path d="M -22 -6 C -16 -2, -10 -2, -6 -6" fill="none" stroke="#86efac" strokeWidth="1.4" />
-            <path d="M -22 6 C -16 10, -10 10, -6 6" fill="none" stroke="#86efac" strokeWidth="1.4" />
-            <path d="M 22 -6 C 16 -2, 10 -2, 6 -6" fill="none" stroke="#86efac" strokeWidth="1.4" />
-            <path d="M 22 6 C 16 10, 10 10, 6 6" fill="none" stroke="#86efac" strokeWidth="1.4" />
-          </g>
-
-          {/* Neural sparkle dots */}
-          {[
-            { x: -18, y: -16, d: "0s" },
-            { x: 16, y: -14, d: "0.7s" },
-            { x: -10, y: 18, d: "1.4s" },
-            { x: 12, y: 16, d: "2.1s" }
-          ].map((s, i) => (
-            <circle key={i} cx={s.x} cy={s.y} r="2" fill="#bbf7d0">
-              <animate attributeName="opacity" values="0;1;0" dur="2.5s" begin={s.d} repeatCount="indefinite" />
-            </circle>
-          ))}
-        </g>
-
-        {/* Vertical data line from chip to brain */}
-        <line x1="200" y1="200" x2="200" y2="180" stroke="#4ade80" strokeWidth="2" className="dash-flow" />
-      </svg>
-    </div>
-  );
-}
 
 export function BuiltForScale() {
   return (
@@ -180,15 +72,28 @@ export function BuiltForScale() {
           </motion.a>
         </motion.div>
 
-        {/* CENTER: Brain chip visual */}
+        {/* CENTER: Cube hologram showcase image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="order-1 lg:order-2"
+          className="relative order-1 lg:order-2"
         >
-          <BrainChipVisual />
+          {/* Outer glow */}
+          <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-emerald-500/30 via-emerald-400/15 to-transparent blur-3xl" />
+
+          <div className="relative overflow-hidden rounded-2xl border border-emerald-400/30 shadow-[0_30px_80px_-20px_rgba(34,197,94,0.55)]">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/4 bg-gradient-to-t from-black/40 to-transparent" />
+            <Image
+              src="/jungle-cube.png"
+              alt="Jungle Labs intelligent systems: AI agents, automation flow, content pipeline, and performance analytics working together"
+              width={1536}
+              height={1024}
+              className="h-auto w-full"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
         </motion.div>
 
         {/* RIGHT: Automate / Optimize / Scale */}
