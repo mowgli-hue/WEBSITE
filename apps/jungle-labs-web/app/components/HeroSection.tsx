@@ -115,7 +115,7 @@ export function HeroSection() {
   }, [mouseX, mouseY]);
 
   return (
-    <section ref={containerRef} className="section-shell relative pt-20 md:pt-24">
+    <section ref={containerRef} className="section-wide relative pt-20 md:pt-24">
       <div className="absolute inset-0 -z-10 overflow-hidden rounded-[2rem] border border-emerald-300/10 bg-gradient-to-br from-emerald-900/40 via-black to-emerald-950/60" />
       <ParticleField />
 
@@ -272,7 +272,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55, duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-6 -mt-2 mb-10 md:mx-12"
+        className="relative z-10 mx-4 -mt-2 mb-10 md:mx-8 lg:mx-12"
       >
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-emerald-300/15 bg-black/55 backdrop-blur-xl md:grid-cols-4">
           {stats.map(({ Icon, to, suffix, label }, i) => (

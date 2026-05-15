@@ -17,7 +17,7 @@ const todayList = [
 
 export function TodaysPlan() {
   return (
-    <AnimatedSection id="todays-plan" className="section-shell mt-28">
+    <AnimatedSection id="todays-plan" className="section-wide mt-28">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

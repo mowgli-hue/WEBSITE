@@ -23,7 +23,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-4 z-50 section-shell">
+    <header className="sticky top-4 z-50 section-wide">
       <motion.nav
         initial={false}
         animate={{

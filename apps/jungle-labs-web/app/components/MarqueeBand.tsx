@@ -20,7 +20,7 @@ export function MarqueeBand() {
   const list = [...items, ...items];
 
   return (
-    <section className="relative my-16 overflow-hidden border-y border-emerald-300/10 bg-black/30 py-6 backdrop-blur-sm">
+    <section className="relative my-16 w-full overflow-hidden border-y border-emerald-300/10 bg-black/30 py-6 backdrop-blur-sm">
       {/* fade masks left/right so it doesn't clip awkwardly */}
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#04080e] to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#04080e] to-transparent" />
