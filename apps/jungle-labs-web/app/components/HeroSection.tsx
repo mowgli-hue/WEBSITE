@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, Calendar, Code2, MessageSquare, Rocket, ShieldCheck, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Calendar, MessageSquare, Rocket, ShieldCheck, Users } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -17,7 +17,6 @@ function useTypewriter(words: string[], speed = 90, hold = 1600) {
   useEffect(() => {
     const word = words[wordIdx];
     let timer: ReturnType<typeof setTimeout>;
-
     if (phase === "typing") {
       if (text.length < word.length) {
         timer = setTimeout(() => setText(word.slice(0, text.length + 1)), speed);
@@ -43,13 +42,11 @@ function useTypewriter(words: string[], speed = 90, hold = 1600) {
 function CountUp({
   to,
   suffix = "",
-  prefix = "",
   duration = 1400,
   decimals = 0
 }: {
   to: number;
   suffix?: string;
-  prefix?: string;
   duration?: number;
   decimals?: number;
 }) {
@@ -85,13 +82,7 @@ function CountUp({
   }, [to, duration]);
 
   const display = decimals > 0 ? val.toFixed(decimals) : Math.round(val).toLocaleString();
-  return (
-    <span ref={ref}>
-      {prefix}
-      {display}
-      {suffix}
-    </span>
-  );
+  return <span ref={ref}>{display}{suffix}</span>;
 }
 
 const heroStats = [
@@ -109,26 +100,14 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* ── BACKGROUND PHOTO LAYER ── */}
+      {/* Subtle ambient backdrop */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/jungle-hero.png"
-          alt="Jungle Labs AI automation and intelligent systems team in Surrey, BC"
-          fill
-          priority
-          quality={92}
-          className="object-cover object-center opacity-65"
-          sizes="100vw"
-        />
-        {/* Layered dark/green gradients to blend photo into page */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/65 to-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,197,94,0.18),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(34,197,94,0.18),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(74,222,128,0.10),_transparent_50%)]" />
       </div>
 
-      {/* ── CONTENT ── */}
-      <div className="section-wide relative pt-24 pb-12 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
+      <div className="section-wide relative pt-16 pb-12 md:pt-20 md:pb-20 lg:pt-24 lg:pb-24">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           {/* LEFT: Headline & CTA */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -193,19 +172,19 @@ export function HeroSection() {
               className="flex flex-wrap items-center gap-4 pt-2"
             >
               <motion.a
-                href="#services"
+                href="#built-for-scale"
                 onClick={() => trackEvent("explore_systems_click", { placement: "hero" })}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="group inline-flex items-center gap-3 rounded-md border-2 border-emerald-400 bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-emerald-400 transition hover:bg-emerald-400 hover:text-black"
               >
                 Explore Systems
-                <span className="flex h-7 w-7 items-center justify-center rounded border border-emerald-400 transition group-hover:border-black group-hover:bg-black/10">
+                <span className="flex h-7 w-7 items-center justify-center rounded border border-emerald-400 transition group-hover:border-black/40">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </motion.a>
               <motion.a
-                href="#case-studies"
+                href="/case-studies"
                 onClick={() => trackEvent("view_work_click", { placement: "hero" })}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
@@ -217,125 +196,54 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT: Floating data cards overlaying the photo */}
+          {/* RIGHT: Hero photo as portrait centerpiece */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 hidden lg:block"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            className="relative"
           >
-            <div className="space-y-4">
-              {/* AI Agents */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55, duration: 0.7 }}
-                className="ml-auto w-full max-w-xs rounded-2xl border border-emerald-300/30 bg-black/65 p-5 backdrop-blur-xl"
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-300/80">AI Agents</p>
-                    <p className="mt-2 text-4xl font-bold text-white">
-                      <CountUp to={12} />
-                    </p>
-                    <p className="mt-1 text-[11px] uppercase tracking-[0.12em] text-white/55">Active</p>
-                  </div>
-                  <Bot className="h-7 w-7 text-emerald-300" />
-                </div>
-              </motion.div>
+            {/* Outer glow ring */}
+            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-emerald-500/25 via-emerald-400/10 to-transparent blur-3xl" />
 
-              {/* DM Automation */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.65, duration: 0.7 }}
-                className="ml-auto w-full max-w-xs rounded-2xl border border-emerald-300/30 bg-black/65 p-5 backdrop-blur-xl"
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-300/80">DM Automation</p>
-                    <p className="mt-2 text-4xl font-bold text-white">
-                      <CountUp to={342} />
-                    </p>
-                    <p className="mt-1 text-[11px] uppercase tracking-[0.12em] text-white/55">Replied</p>
-                  </div>
-                  <MessageSquare className="h-7 w-7 text-emerald-300" />
-                </div>
-              </motion.div>
+            <div className="relative overflow-hidden rounded-2xl border border-emerald-400/30 shadow-[0_30px_100px_-20px_rgba(34,197,94,0.5)]">
+              {/* subtle gradient veil at bottom for grounding */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/4 bg-gradient-to-t from-black/40 to-transparent" />
 
-              {/* Leads Generated with mini trend */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.75, duration: 0.7 }}
-                className="ml-auto w-full max-w-xs rounded-2xl border border-emerald-300/30 bg-black/65 p-5 backdrop-blur-xl"
-              >
-                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-300/80">Leads Generated</p>
-                <p className="mt-2 text-4xl font-bold text-white">
-                  <CountUp to={1342} />
-                </p>
-                <div className="mt-2 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-300">
-                  <TrendingUp className="h-3.5 w-3.5" />
-                  +28% vs last month
-                </div>
-                {/* mini sparkline */}
-                <svg className="mt-3 h-10 w-full" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="rgba(74,222,128,0.4)" />
-                      <stop offset="100%" stopColor="rgba(74,222,128,0)" />
-                    </linearGradient>
-                  </defs>
-                  <polyline
-                    points="0,32 25,28 50,30 75,22 100,24 125,16 150,18 175,10 200,6"
-                    fill="none"
-                    stroke="#4ade80"
-                    strokeWidth="2"
-                  />
-                  <polygon
-                    points="0,32 25,28 50,30 75,22 100,24 125,16 150,18 175,10 200,6 200,40 0,40"
-                    fill="url(#sparkFill)"
-                  />
-                </svg>
-              </motion.div>
+              <Image
+                src="/jungle-hero.png"
+                alt="Jungle Labs AI automation engineer with intelligent systems dashboards — Systems That Think. Businesses That Scale."
+                width={1024}
+                height={1536}
+                priority
+                quality={92}
+                className="photo-fade-in relative h-auto w-full"
+                sizes="(max-width: 1024px) 100vw, 600px"
+              />
 
-              {/* Systems Running list */}
+              {/* "Live" chip floating on photo */}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.85, duration: 0.7 }}
-                className="ml-auto w-full max-w-xs rounded-2xl border border-emerald-300/30 bg-black/65 p-5 backdrop-blur-xl"
+                transition={{ delay: 1.0, duration: 0.7 }}
+                className="absolute right-4 top-4 z-20 inline-flex items-center gap-2 rounded-full border border-emerald-400/50 bg-black/75 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-300 backdrop-blur-md"
               >
-                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-300/80">Systems Running</p>
-                <ul className="mt-3 space-y-2 text-sm">
-                  {[
-                    { name: "Content Agent", status: "Active" },
-                    { name: "Analytics Agent", status: "Active" },
-                    { name: "DM Agent", status: "Active" },
-                    { name: "Sales Agent", status: "Active" }
-                  ].map((s) => (
-                    <li key={s.name} className="flex items-center justify-between">
-                      <span className="flex items-center gap-2 text-white/85">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(74,222,128,0.9)]" />
-                        {s.name}
-                      </span>
-                      <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-emerald-300">
-                        {s.status}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                </span>
+                All Systems Operational
               </motion.div>
             </div>
           </motion.div>
         </div>
 
-        {/* ── HORIZONTAL STATS STRIP (image 2 style) ── */}
+        {/* ── HORIZONTAL STATS STRIP ── */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-14 rounded-2xl border border-emerald-300/20 bg-black/60 p-2 backdrop-blur-xl md:mt-20"
+          className="mt-14 rounded-2xl border border-emerald-400/20 bg-black/60 p-2 backdrop-blur-xl md:mt-20"
         >
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl md:grid-cols-3 lg:grid-cols-5">
             {heroStats.map(({ Icon, to, suffix, label, sub, decimals }, i) => (
