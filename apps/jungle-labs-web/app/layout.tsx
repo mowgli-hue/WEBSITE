@@ -60,13 +60,13 @@ export const metadata: Metadata = {
       "Building intelligent digital systems: AI automation, blockchain platforms, tokenization engines, and fully automated industry CRMs for modern businesses.",
     siteName: "Jungle Labs",
     locale: "en_CA",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Jungle Labs — AI, Blockchain & CRM Automation Studio" }]
+    images: [{ url: "/opengraph-image?v=3", width: 1200, height: 630, alt: "Jungle Labs — We Build. You Scale. Systems That Think." }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Jungle Labs | AI, Blockchain & CRM Automation",
     description: "AI automation, blockchain platforms, tokenization engines, and industry CRMs — built by Jungle Labs.",
-    images: ["/twitter-image"]
+    images: ["/twitter-image?v=3"]
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],

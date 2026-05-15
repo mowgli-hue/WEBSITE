@@ -172,7 +172,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.55, duration: 0.9 }}
-            className="max-w-xl text-base leading-relaxed text-white/70 md:text-lg"
+            className="max-w-xl text-base leading-relaxed text-white/80 md:text-lg"
           >
             At Jungle Labs, we engineer next-gen digital systems, AI solutions, blockchain
             platforms, and tokenization engines that drive real-world impact.
@@ -291,7 +291,7 @@ export function HeroSection() {
                 <span className="text-xl font-bold leading-none text-white md:text-2xl">
                   <CountUp to={to} suffix={suffix} />
                 </span>
-                <span className="mt-1 text-[11px] uppercase tracking-[0.1em] text-white/55">{label}</span>
+                <span className="mt-1 text-[11px] uppercase tracking-[0.1em] text-white/70">{label}</span>
               </div>
             </motion.div>
           ))}

@@ -29,7 +29,7 @@ export function SocialProofBanner() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
               whileHover={{ y: -3 }}
-              className="flex items-center gap-2 text-white/55 transition hover:text-emerald-200"
+              className="flex items-center gap-2 text-white/70 transition hover:text-emerald-200"
             >
               <Icon className="h-5 w-5" />
               <span className="text-base font-semibold tracking-tight">{p.name}</span>

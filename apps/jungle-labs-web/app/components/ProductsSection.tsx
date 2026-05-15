@@ -34,7 +34,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       </div>
       <h3 className="mt-4 text-3xl font-semibold text-white">{product.name}</h3>
       <p className="mt-2 text-sm uppercase tracking-[0.1em] text-emerald-200/80">{product.subtitle}</p>
-      <p className="mt-4 leading-relaxed text-white/70">{product.description}</p>
+      <p className="mt-4 leading-relaxed text-white/80">{product.description}</p>
       <div className="mt-5 space-y-2 border-t border-white/10 pt-4">
         {product.highlights.map((highlight) => (
           <div key={highlight} className="text-sm text-emerald-100/80">

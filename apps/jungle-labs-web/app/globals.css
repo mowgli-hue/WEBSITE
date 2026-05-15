@@ -32,7 +32,7 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  color: rgb(var(--jl-mist) / 0.95);
+  color: rgb(255 255 255 / 0.98);
   font-family: var(--font-inter), "Inter", "Segoe UI", sans-serif;
   font-feature-settings: "ss01", "cv11", "cv02";
   overflow-x: hidden;

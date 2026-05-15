@@ -68,7 +68,7 @@ export function ContactCTA() {
             <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
               Let&apos;s Build the Future of Your Business
             </h2>
-            <p className="mt-4 text-white/70">
+            <p className="mt-4 text-white/80">
               Tell us your vision. We will help you architect, build, and deploy an intelligent digital system designed for outcomes.
             </p>
 
@@ -91,7 +91,7 @@ export function ContactCTA() {
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-5 text-sm text-white/45">
+            <div className="mt-6 flex flex-wrap gap-5 text-sm text-white/65">
               <a href="mailto:admin@junglelabsworld.com" className="transition hover:text-emerald-200">admin@junglelabsworld.com</a>
               <a href="tel:+16049028699" className="transition hover:text-emerald-200">+1 (604) 902-8699</a>
               <span>Surrey, BC, Canada</span>
@@ -103,11 +103,11 @@ export function ContactCTA() {
             <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-emerald-300/25 bg-emerald-400/10 p-8 text-center">
               <CheckCircle className="h-10 w-10 text-emerald-300" />
               <p className="text-lg font-semibold text-white">Message received!</p>
-              <p className="text-sm text-white/65">We&apos;ll be in touch within 24 hours.</p>
+              <p className="text-sm text-white/80">We&apos;ll be in touch within 24 hours.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              <p className="text-sm font-semibold text-white/70">Or send a quick message</p>
+              <p className="text-sm font-semibold text-white/80">Or send a quick message</p>
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}

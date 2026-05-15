@@ -35,11 +35,11 @@ export function TestimonialsSection() {
           <div className="flex flex-col items-center">
             <div className="flex items-baseline gap-1">
               <span className="text-2xl font-bold text-emerald-300">5.0</span>
-              <span className="text-xs text-white/55">/ 5</span>
+              <span className="text-xs text-white/70">/ 5</span>
             </div>
             <StarRow count={5} />
           </div>
-          <div className="border-l border-white/10 pl-3 text-xs leading-tight text-white/65">
+          <div className="border-l border-white/10 pl-3 text-xs leading-tight text-white/80">
             Average client<br />satisfaction rating
           </div>
         </div>
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
             </blockquote>
             <figcaption className="mt-5 border-t border-white/10 pt-4">
               <p className="text-sm font-semibold text-white">{t.author}</p>
-              <p className="mt-0.5 text-xs text-white/55">{t.role}</p>
+              <p className="mt-0.5 text-xs text-white/70">{t.role}</p>
             </figcaption>
           </motion.figure>
         ))}

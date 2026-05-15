@@ -44,7 +44,7 @@ export function TodaysPlan() {
             <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
               Ready to <span className="neon-green">build with us</span>?
             </h2>
-            <p className="text-base leading-relaxed text-white/70">
+            <p className="text-base leading-relaxed text-white/80">
               Tell us what you&apos;re building. We&apos;ll map an architecture, scope a sprint plan, and have your
               first deliverable in your hands within two weeks.
             </p>
@@ -82,7 +82,7 @@ export function TodaysPlan() {
               </motion.a>
               <a
                 href="mailto:admin@junglelabsworld.com"
-                className="text-sm text-white/65 transition hover:text-emerald-200"
+                className="text-sm text-white/80 transition hover:text-emerald-200"
               >
                 or email us directly →
               </a>

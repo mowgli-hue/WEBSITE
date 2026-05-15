@@ -81,14 +81,14 @@ export function ServicesSection() {
             </span>
             <h3 className="mt-4 text-3xl font-semibold text-white md:text-4xl">{feature.title}</h3>
             <p className="mt-3 text-base leading-relaxed text-white/75">{feature.short}</p>
-            <p className="mt-4 text-sm leading-relaxed text-white/55">{feature.details}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/70">{feature.details}</p>
 
             <div className="mt-auto pt-8">
               <div className="flex flex-wrap gap-2">
                 {["Agents", "Pipelines", "Triggers", "Observability"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/65"
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/80"
                   >
                     {tag}
                   </span>
@@ -118,7 +118,7 @@ export function ServicesSection() {
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{service.short}</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/80">{service.short}</p>
               <p className="mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-emerald-100/0 transition-all duration-500 group-hover:max-h-48 group-hover:text-emerald-100/80">
                 {service.details}
               </p>
@@ -137,7 +137,7 @@ export function ServicesSection() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-white/70">{service.short}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-white/80">{service.short}</p>
                 </div>
               </div>
             </SpotlightCard>

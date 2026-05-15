@@ -23,7 +23,7 @@ export function OurTeam() {
           <h2 className="section-title">
             One <span className="gradient-text">team</span>. Every skill you need.
           </h2>
-          <p className="text-base leading-relaxed text-white/70">
+          <p className="text-base leading-relaxed text-white/80">
             From research to build to train to deploy — we&apos;re a small, fierce pack of operators who&apos;ve
             shipped real products together. No silos. No handoffs. One project plan, one team, one outcome.
           </p>
@@ -48,15 +48,15 @@ export function OurTeam() {
           <div className="grid grid-cols-3 gap-3 border-t border-white/10 pt-6">
             <div>
               <p className="text-2xl font-semibold text-emerald-300">4+</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/55">Products Shipped</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/70">Products Shipped</p>
             </div>
             <div>
               <p className="text-2xl font-semibold text-emerald-300">3+</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/55">Years Building</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/70">Years Building</p>
             </div>
             <div>
               <p className="text-2xl font-semibold text-emerald-300">24h</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/55">Response Time</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/70">Response Time</p>
             </div>
           </div>
         </div>

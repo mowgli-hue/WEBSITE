@@ -29,7 +29,7 @@ export function MarqueeBand() {
         {list.map(({ Icon, label }, i) => (
           <div
             key={`${label}-${i}`}
-            className="group flex shrink-0 items-center gap-3 px-4 text-white/55 transition hover:text-emerald-200"
+            className="group flex shrink-0 items-center gap-3 px-4 text-white/70 transition hover:text-emerald-200"
           >
             <Icon className="h-5 w-5 text-emerald-300/70 transition group-hover:scale-110 group-hover:text-emerald-200" />
             <span className="whitespace-nowrap text-sm font-semibold uppercase tracking-[0.2em]">

@@ -17,7 +17,7 @@ export function FAQSection() {
         <h2 className="section-title">
           Things <span className="gradient-text">we get asked</span>
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-white/70">
+        <p className="mt-4 text-base leading-relaxed text-white/80">
           If your question isn&apos;t here, just{" "}
           <a href="#contact" className="text-emerald-300 underline decoration-emerald-300/40 underline-offset-4 hover:decoration-emerald-300/80">
             send us a note
@@ -61,7 +61,7 @@ export function FAQSection() {
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="px-6 pb-6 text-sm leading-relaxed text-white/70 md:text-base">
+                    <p className="px-6 pb-6 text-sm leading-relaxed text-white/80 md:text-base">
                       {faq.a}
                     </p>
                   </motion.div>

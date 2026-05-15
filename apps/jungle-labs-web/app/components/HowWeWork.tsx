@@ -42,7 +42,7 @@ export function HowWeWork() {
         <h2 className="section-title">
           Our process is <span className="gradient-text">battle-tested</span>
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-white/70">
+        <p className="mt-4 text-base leading-relaxed text-white/80">
           Five steps. Repeated relentlessly. From the jungle to your dashboard — this is how we ship systems
           that scale.
         </p>
@@ -104,7 +104,7 @@ export function HowWeWork() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold uppercase tracking-wider text-white">{label}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-white/65">{detail}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-white/80">{detail}</p>
                 </div>
               </div>
             </motion.div>

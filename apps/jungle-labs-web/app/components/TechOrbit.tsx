@@ -31,7 +31,7 @@ export function TechOrbit() {
           <h2 className="section-title">
             One <span className="gradient-text">intelligent</span> stack. Every layer working together.
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
             AI, blockchain, and analytics aren&apos;t separate boxes for us — they&apos;re a single composable
             stack. Tokens flow into ledgers, ledgers feed analytics, analytics feed AI agents, AI agents
             trigger contracts. Everything talks.

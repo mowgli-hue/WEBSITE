@@ -26,7 +26,7 @@ export function RoadmapSection() {
             <span className="absolute -left-[30px] top-8 h-3 w-3 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(52,211,153,0.8)]" />
             <div className="text-xs font-semibold uppercase tracking-[0.13em] text-emerald-200">{item.year}</div>
             <h3 className="mt-2 text-xl font-semibold text-white">{item.title}</h3>
-            <p className="mt-2 leading-relaxed text-white/70">{item.detail}</p>
+            <p className="mt-2 leading-relaxed text-white/80">{item.detail}</p>
           </motion.article>
         ))}
       </div>

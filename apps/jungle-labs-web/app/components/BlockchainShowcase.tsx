@@ -123,7 +123,7 @@ export function BlockchainShowcase() {
           <h2 className="section-title">
             On-chain systems built for <span className="gradient-text">real businesses</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-white/80">
             We build the practical side of blockchain: tokenization, smart contracts, identity, and audit
             infrastructure that plugs into your existing CRM, analytics, and AI workflows.
           </p>
@@ -161,7 +161,7 @@ export function BlockchainShowcase() {
                   <Icon className={`h-5 w-5 ${p.tint}`} />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/70">{p.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/80">{p.body}</p>
               </div>
             </motion.article>
           );
